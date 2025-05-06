@@ -1,0 +1,25 @@
+import React from "react";
+import styles from "./Header.module.css";
+import { Navbar } from "../Navbar/Navbar";
+
+export const Header = () => {
+  return (
+    <>
+      <Navbar />
+      <header>
+        <div className={styles.text}>
+          <h1>Hello, My names Mohamed lorem ipsum dolor</h1>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div className={styles.btnNext}>
+          <div className={styles.btn}>
+            <a href="#">Curriculum vitae</a>
+          </div>
+          <div className={styles.btn}>
+            <a href="#">lorem</a>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+};

@@ -7,7 +7,7 @@ export const Navbar = () => {
       <nav>
         <div className="status">
           <span>Mohamed EL BERMIL</span>
-          <div className="btn-status">
+          <div className="btnNnextTto">
             <div className="btn">Permis</div>
             <div className="btn">
               Recherche d’alterance à partir du 12/08/2025
@@ -22,8 +22,9 @@ export const Navbar = () => {
             <a href="#">Work</a>
           </li>
           <li>
-            {/* arrow */}
-            <a href="#contact">Contact</a>
+            <a href="#" id="contact">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>

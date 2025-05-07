@@ -1,6 +1,7 @@
 @import "../../styles/variables.css";
 .blocSkill {
     padding-left: 4em;
+    margin-bottom: 3em;
 }
 .skillsTitle {
     font-size: 40px;

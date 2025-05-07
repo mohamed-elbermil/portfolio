@@ -1,0 +1,22 @@
+.ExperiencesContainer, .company{
+    font-size: 20px;
+}
+
+.company {
+    text-transform: uppercase;
+    opacity: 70%;
+}
+
+.span, .company {
+    font-weight: 700;
+}
+
+.ExperiencesContainer ul {
+    margin-left: 22px;
+}
+
+.companyDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+.allExperiences {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.bgBlur {
+    position: absolute;
+    z-index: -1;
+    height: -webkit-fill-available;
+    width: 69%;
+    filter: blur(120px);
+    top: 231px;
+    animation: rotate 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

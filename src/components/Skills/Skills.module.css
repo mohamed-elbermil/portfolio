@@ -1,0 +1,21 @@
+@import "../../styles/variables.css";
+.blocSkill {
+    padding-left: 4em;
+}
+.skillsTitle {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.techButton {
+    background: #518EFF;
+    border-radius: var(--border-radius-full);
+    padding: 8px 39px;
+    margin: 0 9px 9px 0 ;
+    border: none;
+}
+.allSkills {
+    display: flex;
+    flex-wrap: wrap;
+}

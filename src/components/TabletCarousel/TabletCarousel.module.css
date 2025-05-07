@@ -1,13 +1,39 @@
 .tabletFrame {
-    background: red;
     height: 314px;
-    overflow-x: hidden;
-    margin: 3em 0;
+    overflow: hidden;
+    margin: 3em 0 0 0;
+    position: relative;
+    z-index: 9999;
+    padding-top: 50px;
 }
 
-.swiper{
+.swiper {
     width: 46em;
     border: solid 16px #00000073;
     border-radius: 24px;
-    background: yellow!important;
+    background: #161824b0;
 }
+.shape {
+    display: flex;
+    justify-content: center;
+}
+.shadows {
+    background: #9f76ce;
+    width: 28%;
+    height: 56vh;
+    position: absolute;
+    z-index: -1;
+    top: 51px;
+    filter: blur(121px);
+    animation: rotate 4s linear infinite;
+    top: 233px;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

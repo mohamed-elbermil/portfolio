@@ -2,6 +2,8 @@
   --primary-color: #1e1e1e;
   --secondary-color: #ff8151;
   --cta-color: #714a9e;
+  --background: #161824;
+  --white:#fff;
   /*Border*/
   --border-radius-full: 80px;
 }

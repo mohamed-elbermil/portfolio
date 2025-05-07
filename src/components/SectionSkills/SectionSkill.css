@@ -1,0 +1,8 @@
+.sectionSplit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 11em 0;
+}

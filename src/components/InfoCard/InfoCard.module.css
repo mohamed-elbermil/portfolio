@@ -1,0 +1,23 @@
+@import "../../styles/variables.css";
+
+.infosContainer {
+    width: 36em;
+}
+
+.span {
+    cursor: context-menu;
+    font-size: 20px;
+    border: solid 1px var(--white);
+    padding: 6px 18px;
+    border-radius: 50px;
+}
+h2 {
+    margin: 15px 0;
+    font-size: 40px;
+    font-weight: 500;
+}
+h3{
+font-size: 16px;
+font-weight: 500;
+opacity: 69%;
+}

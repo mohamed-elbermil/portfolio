@@ -1,9 +1,13 @@
 import React from "react";
+import {SectionKills} from "../SectionSkills/SectionSkills"
 
-const Main = ({children}) => {
+
+
+const Main = () => {
     return(
         <main>
-            {children}
+            <SectionKills />
+            
         </main>
     )
 }

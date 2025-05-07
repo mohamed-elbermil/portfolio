@@ -33,6 +33,10 @@ export const TabletCarousel = () => {
     }
 
     </Swiper>
+
+    <div className={styles.shape}>
+      <div className={styles.shadows}>s</div>
+    </div>
     </div>
     )
 }

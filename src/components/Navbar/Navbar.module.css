@@ -1,7 +1,7 @@
 @import url("../../styles/variables.css");
 
 nav {
-  background: var(--primary-color);
+  background: var(--background);
   width: 100%;
   position: fixed;
   top: 0;
@@ -43,6 +43,6 @@ nav a {
 }
 
 nav ul li:last-child {
-  background: red;
+  background: var(--cta-color);
   padding: 1em;
 }

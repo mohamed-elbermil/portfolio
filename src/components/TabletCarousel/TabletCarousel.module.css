@@ -1,0 +1,13 @@
+.tabletFrame {
+    background: red;
+    height: 314px;
+    overflow-x: hidden;
+    margin: 3em 0;
+}
+
+.swiper{
+    width: 46em;
+    border: solid 16px #00000073;
+    border-radius: 24px;
+    background: yellow!important;
+}

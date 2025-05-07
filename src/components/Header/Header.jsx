@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { Navbar } from "../Navbar/Navbar";
+import { TabletCarousel } from "../TabletCarousel/TabletCarousel";
 
 export const Header = () => {
   return (
@@ -19,6 +20,7 @@ export const Header = () => {
             <a href="#">lorem</a>
           </div>
         </div>
+        <TabletCarousel />
       </header>
     </>
   );

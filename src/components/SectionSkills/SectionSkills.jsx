@@ -3,7 +3,7 @@ import { Skills } from "../Skills/Skills";
 import {InfoCard} from "../InfoCard/InfoCard"
 import "./SectionSkill.css"
 
-export const SectionKills = () => {
+export const SectionSkills = () => {
     return(
         <>
             <div className="sectionSplit">

@@ -1,13 +1,16 @@
 import React from "react";
-import {SectionKills} from "../SectionSkills/SectionSkills"
+import {SectionSkills} from "../SectionSkills/SectionSkills";
+import SectionFormations from "../SectionFormations/SectionFormations";
+import SectionExperiences from "../SectionExperiences/SectionExperiences";
 
 
 
 const Main = () => {
     return(
         <main>
-            <SectionKills />
-            
+            <SectionSkills />
+            <SectionExperiences />
+            <SectionFormations /> 
         </main>
     )
 }

@@ -5,6 +5,11 @@
     position: relative;
     z-index: 9999;
     padding-top: 50px;
+    transition-duration: .4s;
+}
+
+.tabletFrame:hover {
+  height: 410px;
 }
 
 .swiper {

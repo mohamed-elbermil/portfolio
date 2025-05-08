@@ -8,7 +8,7 @@ import image from "../../assets/peroquet.png"
 const SectionExperiences = () => {
     return(
         <>
-        <div className="sectionSplit">
+        <div className="sectionSplit" id="experiences">
         <InfoCard 
             title = "Expériences professionnelles"
             description = "Lorem ipsum dolor kzehfkzfezlfjlzfzlcz,lc,z,clz"

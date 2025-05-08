@@ -9,10 +9,16 @@ export const Navbar = () => {
           <span>Mohamed EL BERMIL</span>
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="#skills">Compétences</a>
               </li>
               <li>
-                <a href="#">Work</a>
+                <a href="#experiences">Expériences</a>
+              </li>
+              <li>
+                <a href="#formation">Formations</a>
+              </li>
+              <li>
+                <a href="#">Projets</a>
               </li>
               <li>
                 <a href="#" id={styles.contact}>

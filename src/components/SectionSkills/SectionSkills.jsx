@@ -6,7 +6,7 @@ import "./SectionSkill.css"
 export const SectionSkills = () => {
     return(
         <>
-            <div className="sectionSplit">
+            <div className="sectionSplit" id="skills">
                 <InfoCard 
                 title = "Compétences"
                 description = "Lorem ipsum dolor kzehfkzfezlfjlzfzlcz,lc,z,clz"

@@ -8,7 +8,7 @@ import {InfoCard} from "../InfoCard/InfoCard"
 const SectionFormations = () => {
     return(
         <>
-        <div className="sectionSplit">
+        <div className="sectionSplit" id="formation">
         <InfoCard 
         title="Formations"
         description="Lorem ipsum dolor kzehfkzfezlfjlzfzlcz,lc,z,clz"

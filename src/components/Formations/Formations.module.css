@@ -1,0 +1,25 @@
+@import url("../../styles/variables.css");
+.blocFormation {
+    background: url("../../assets/nexa.png");
+    margin: 0 1em;
+    padding: 1em;
+    border-radius: var( --border-radius-middle);
+}
+
+.formationContainer a{
+    background: var(--secondary-color);
+    padding: 7px 18px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.topLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topLeft h2 {
+    font-size: 14px;
+}

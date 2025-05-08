@@ -8,6 +8,12 @@ export const Header = () => {
     <>
       <Navbar />
       <header>
+      <div className={styles.btnStatus}>
+            <div className={styles.btn}>Permis B</div>
+            <div className={styles.btn}>
+              Recherche d’alterance à partir du 12/08/2025
+            </div>
+          </div>
         <div className={styles.text}>
           <h1>Hello, My names Mohamed lorem ipsum dolor</h1>
           <p>Lorem ipsum dolor sit amet consectetur.</p>

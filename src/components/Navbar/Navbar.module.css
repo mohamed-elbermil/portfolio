@@ -1,16 +1,19 @@
 @import url("../../styles/variables.css");
 
 nav {
-  background: var(--background);
+  background: #161824f0;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: var(--white);
   border-bottom: solid 1px #ffffff17;
+  z-index: 99999;
+  backdrop-filter: blur(5px);
+  padding: 1em 0;
 }
 
 nav span {
@@ -19,27 +22,37 @@ nav span {
   font-size: 22px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-}
-
-.btn-next-to {
-  background-color: red;
-}
-
 nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  right: 0;
+  position: absolute;
 }
 
 nav a {
-  margin: 0 2em;
+  padding: 22px 45px;
+  transition-duration: .4s;
 }
 
-nav ul li:last-child {
-  background: var(--cta-color);
-  padding: 1em;
+nav a:hover {
+  background: #a268d3;
 }
+
+#contact {
+  background: var(--cta-color);
+  margin-right: 0;
+}
+
+#contact:hover {
+  background: #ffffff;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+

@@ -1,4 +1,5 @@
 .allFormations {
     display: flex;
     flex-wrap: wrap;
+    width: 38em;
 }

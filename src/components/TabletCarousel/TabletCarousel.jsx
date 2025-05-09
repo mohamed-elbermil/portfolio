@@ -14,7 +14,6 @@ export const TabletCarousel = () => {
     return(
         <div className={styles.tabletFrame}>
        <Swiper
-      // install Swiper modules
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}

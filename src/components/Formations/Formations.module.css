@@ -1,9 +1,17 @@
 @import url("../../styles/variables.css");
 .blocFormation {
-    background: url("../../assets/nexa.png");
-    margin: 0 1em;
+    background: url("../../assets/nexa.webp");
+    background-size: cover;
+    margin: 1em;
     padding: 1em;
     border-radius: var( --border-radius-middle);
+    width: 17em;
+}
+
+.formationContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
 }
 
 .formationContainer a{
@@ -22,4 +30,9 @@
 
 .topLeft h2 {
     font-size: 14px;
+}
+
+.topLeft img {
+    width: 3em;
+    border-radius: 80px;
 }

@@ -5,7 +5,12 @@
     margin: 1em;
     padding: 1em;
     border-radius: var( --border-radius-middle);
-    width: 17em;
+    width: 23em;
+    transition-duration: .4s;
+}
+
+.blocFormation:hover {
+    box-shadow: 0 0 50px #714a9e78;
 }
 
 .formationContainer {

@@ -2,30 +2,30 @@ import { logoSchool } from "./logoSchool";
 
 export const formations = [
   {
-    date: "2022",
-    school: "École 42",
-    formation: "Développement Web",
-    link: "/formation-1",
+    date: "2025-2026",
+    school: "Nexa",
+    formation: "BTS SIO - SLAM",
+    link: "https://www.nexa.fr/",
     image : {
         src:logoSchool[0].src,
         alt: "Logo Ecole",
     }
   },
   {
-    date: "2021",
-    school: "OpenClassrooms",
-    formation: "Data Analyst",
-    link: "/formation-2",
+    date: "2023-2024",
+    school: "Web Force 3",
+    formation: "Développeur Web et Web Mobile",
+    link: "https://wf3.carrd.co/",
     image : {
         src:logoSchool[1].src,
         alt: "Logo Ecole",
     }
   },
   {
-    date: "2020",
-    school: "IUT Paris",
-    formation: "Informatique",
-    link: "/formation-3",
+    date: "2022-2023",
+    school: "Web Force 3",
+    formation: "Designer UX/UI",
+    link: "https://wf3.carrd.co/",
     image : {
     src:logoSchool[1].src,
     alt: "Logo Ecole",
@@ -33,9 +33,9 @@ export const formations = [
   },
   {
     date: "2019",
-    school: "Lycée Turing",
-    formation: "BTS SIO",
-    link: "/formation-4",
+    school: "Web Force 3",
+    formation: "Designer Web Marketing Digital",
+    link: "https://wf3.carrd.co/",
     image : {
     src:logoSchool[1].src,
     alt: "Logo Ecole",

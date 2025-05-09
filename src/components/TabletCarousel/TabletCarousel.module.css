@@ -23,15 +23,15 @@
     justify-content: center;
 }
 .shadows {
-    background: #9f76ce;
-    width: 28%;
-    height: 56vh;
+  background: #9f76ce;
+    width: 18%;
+    height: 16vh;
     position: absolute;
     z-index: -1;
     top: 51px;
     filter: blur(121px);
-    animation: rotate 4s linear infinite;
-    top: 233px;
+    animation: _rotate_16sn2_1 4s linear infinite;
+    top: 540px;
 }
 
 @keyframes rotate {
@@ -42,3 +42,5 @@
       transform: rotate(360deg);
     }
   }
+
+  

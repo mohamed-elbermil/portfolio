@@ -26,7 +26,7 @@ export const Header = () => {
             <a href="#">lorem</a>
           </div>
         </div>
-        <TabletCarousel />
+        <TabletCarousel className={styles.styleHeader}/>
       </header>
     </>
   );

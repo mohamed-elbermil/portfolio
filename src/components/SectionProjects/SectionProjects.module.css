@@ -1,0 +1,15 @@
+.title {
+    background: red;
+    text-align: center;
+}
+.styleSection {
+    margin: 3em 0 0 0;
+    z-index: 9999;
+    padding-top: 50px;
+    transition-duration: .4s;
+    background: red !important;
+}
+
+
+
+

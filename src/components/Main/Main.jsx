@@ -2,6 +2,7 @@ import React from "react";
 import {SectionSkills} from "../SectionSkills/SectionSkills";
 import SectionFormations from "../SectionFormations/SectionFormations";
 import SectionExperiences from "../SectionExperiences/SectionExperiences";
+import { SectionProjects } from "../SectionProjects/SectionProjects";
 
 
 
@@ -11,6 +12,7 @@ const Main = () => {
             <SectionSkills />
             <SectionExperiences />
             <SectionFormations /> 
+            <SectionProjects />
         </main>
     )
 }

@@ -1,0 +1,30 @@
+h1 {
+    font-size: 61px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #E1EDED;
+  color: #50A0AB;
+  border-radius: 90px;
+  width: 9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundStatus {
+    background: #50A0AB;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+#cv {
+    background: black;
+    padding: 15px 17px;
+    border-radius: 44px;
+    color: #fff;
+}

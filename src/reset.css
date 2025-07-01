@@ -1,0 +1,60 @@
+/* reset.css */
+
+/* 1. Supprimer les marges/paddings et uniformiser les boîtes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Supprimer les bordures et l'héritage des polices */
+  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+  }
+  
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 3. Uniformiser la taille et la police par défaut */
+  body {
+    line-height: 1.5;
+    font-family: sans-serif;
+    background-color: #F6F6F6;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* 4. Supprimer styles spécifiques sur certains éléments */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 5. Uniformiser les boutons et champs de formulaire */
+  button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  /* 6. Éviter des animations/transitions inattendues */
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /* 7. Empêcher le zoom sur les mobiles */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  

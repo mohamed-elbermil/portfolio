@@ -13,10 +13,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8px;
 }
 
 .roundStatus {
-    background: #50A0AB;
+background: #50A0AB;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -24,7 +25,40 @@ h1 {
 
 #cv {
     background: black;
-    padding: 15px 17px;
-    border-radius: 44px;
     color: #fff;
+    padding: 15px 18px;
+    border-radius: 55px;
+}
+
+.fitness-area-cover {
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    width: 22em;
+    height: 16em;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+    padding: 8em 2em;
+}
+
+.ticket {
+    padding: 8px 15px;
+    border-radius: 84px;
+    background: #a4acac;
+}
+
+.both {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    text-align: center;
+    gap: 6px;
 }

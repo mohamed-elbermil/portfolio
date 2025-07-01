@@ -42,4 +42,16 @@
   width: 40px;
   height: 40px;
   border-radius: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-icon i {
+  color: #fffffff2;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-item.cta:hover i{
+  transform: rotate(20deg);
 }

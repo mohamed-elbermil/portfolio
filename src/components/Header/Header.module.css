@@ -152,6 +152,42 @@
   font-weight: bold;
 }
 
+/* Social Media Icons */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--c-element);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.socialIcons a:hover {
+  background: var(--c-element);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(80, 160, 171, 0.3);
+}
+
+.socialIcons i {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

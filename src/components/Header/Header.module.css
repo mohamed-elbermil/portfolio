@@ -23,23 +23,50 @@ background: #50A0AB;
   border-radius: 50%;
 }
 
-#cv {
+.cv{
     background: black;
     color: #fff;
-    padding: 15px 18px;
-    border-radius: 55px;
+    padding: 1em;
+    border-radius: 44px;
+    width: 9em;
+}
+
+.cv i {
+    margin-right: 10px;
+}
+
+.right-side-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1em;
+    width: 37em;
+}
+
+.left-side-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .fitness-area-cover {
     background: rgb(255, 255, 255);
     padding: 1em;
-    width: 22em;
+    width: 16em;
     height: 16em;
     border-radius: 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+.right-side-header img {
+    width: 18em;
+    border-radius: 20px;
+}
+
+
 
 .header {
     display: flex;
@@ -61,4 +88,37 @@ background: #50A0AB;
     width: 10em;
     text-align: center;
     gap: 6px;
+}
+
+.bloc-top, .bloc-bottom {
+    display: flex;
+    gap: 1em;
+}
+
+.bloc-top {
+    gap: 1em;
+}
+
+.bloc-left {
+    flex: 1;
+    background: linear-gradient(45deg, #8A8CFF, #e2e2ff);    
+    border-radius: 15px;
+    color: #fff;
+    padding: 2em;
+}
+
+.bloc-right {
+    flex: 0;
+}
+
+.bloc-right i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    background: #fff;
+    border-radius: 50%;
+    margin: 6px 0;
+    font-size: 1.2em; 
 }

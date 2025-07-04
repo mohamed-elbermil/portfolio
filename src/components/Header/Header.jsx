@@ -70,7 +70,7 @@ function Header() {
             Disponible
           </span>
           <h1 className={styles.title}>
-            Salut, moi c’est <span className={styles.highlight}>Mohamed</span>
+            Hello, moi c’est <span className={styles.highlight}>Mohamed</span>
           </h1>
           <p className={styles.subtext}>
             Développeur Front-end passionné. J’aide les marques à créer des interfaces modernes et performantes.

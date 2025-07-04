@@ -1,0 +1,117 @@
+/* GameSection.module.css */
+.game-section {
+    padding: 60px 50px;
+  }
+  
+  .line-title {
+    position: relative;
+    width: 400px;
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .line-title::before,
+  .line-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+  }
+  .line-title::before {
+    width: 100%;
+    background: #f2f2f2;
+  }
+  .line-title::after {
+    width: 32px;
+    background: #00e7db;
+  }
+  
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+  
+  .item {
+    min-width: 320px;
+    height: 400px;
+    background: #343434 no-repeat center center / cover;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    scroll-snap-align: start;
+  }
+  .item::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    top: 0;
+    left: 0;
+  }
+  .item-desc {
+    padding: 0 24px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+  }
+  .item-desc p {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: all 0.4s ease-in-out 0.2s;
+  }
+  .item:hover {
+    min-width: 500px;
+  }
+  .item:hover .item-desc {
+    transform: none;
+  }
+  .item:hover .item-desc p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .title {
+    background: #ffffff1f;
+    padding: 6px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 45px;
+    backdrop-filter: blur(41px);
+    margin-bottom: 11px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 8px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #50A0AB;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e818b;
+  }
+  

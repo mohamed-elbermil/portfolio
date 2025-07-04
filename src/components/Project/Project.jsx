@@ -42,7 +42,7 @@ const projects = [
 const Project = () => {
 
   return (
-    <section className={styles["game-section"]}>
+    <section className={styles["game-section"]} id="projects">
       <h2 className={styles["line-title"]}>Mes projets</h2>
       <div className={styles["carousel-container"]}>
         {projects.map((game, index) => (

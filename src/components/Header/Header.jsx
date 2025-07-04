@@ -12,7 +12,7 @@ function Header() {
             <p>Disponible</p>
         </div>
         <h1 className={styles.h1}>Hello,zgertyze <br /> rrtjykui</h1>
-        <p>zerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyj</p>
+        <p>zerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzerthjegthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzezerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyjzerthjergthyj</p>
         <a href="cv-mohamed-elbermil.pdf" download className={styles.cv}>
           <i className="fa-solid fa-download"></i>
           Curriculum vitae
@@ -28,7 +28,7 @@ function Header() {
                   </div>
               </div>
               <div className={styles.both}>
-                  <a href="#" className={styles.ticket}>Accéder au site</a>
+                  <a href="https://fitness-area-mohamed-e.vercel.app/" target='blank' className={styles.ticket}>Accéder au site</a>
                   <span className={styles.ticket}>
                   <i class="fa-solid fa-hourglass-start"></i>
                     1 week</span>

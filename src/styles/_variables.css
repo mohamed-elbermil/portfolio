@@ -1,0 +1,13 @@
+:root {
+/* Background-Color */
+    --c-primary-color: #5bdabd;
+    --c-element: #222;
+    --c-seconday-color:#07ffc6;
+    --c-status: #E1EDED;
+/* Border-radius */
+    --b-border-basic:16px;
+    --b-border-full:60px;
+
+/* Projects */
+    --c-fitness-area:#FF693A;
+}

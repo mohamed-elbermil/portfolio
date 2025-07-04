@@ -21,16 +21,17 @@ function Header() {
       <div className={styles['right-side-header']}>
         <div className={styles['bloc-top']}>
           <div className={styles['fitness-area-cover']}>
-              <div className={styles.title}>
+              <div className={styles['title']}>
                   <p>Fitness-Area</p>
                   <span>Salle de sport</span>
                   <div className={styles.time}>
-                      
                   </div>
               </div>
               <div className={styles.both}>
-                  <span className={styles.ticket}>1 week</span>
                   <a href="#" className={styles.ticket}>Accéder au site</a>
+                  <span className={styles.ticket}>
+                  <i class="fa-solid fa-hourglass-start"></i>
+                    1 week</span>
               </div>
           </div>
           <img src={Profile} alt="Photo de profil" />

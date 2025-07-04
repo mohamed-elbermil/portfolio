@@ -17,10 +17,23 @@ h1 {
 }
 
 .roundStatus {
-background: #50A0AB;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+    background: #50A0AB;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(80, 160, 171, 0.7);
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(80, 160, 171, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(80, 160, 171, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(80, 160, 171, 0);
+  }
 }
 
 .cv{
@@ -29,6 +42,11 @@ background: #50A0AB;
     padding: 1em;
     border-radius: 44px;
     width: 9em;
+    transition: .3s;
+}
+
+.cv:hover {
+    background: #65e1c4;
 }
 
 .cv i {
@@ -61,6 +79,14 @@ background: #50A0AB;
     justify-content: space-between;
 }
 
+.fitness-area-cover p {
+    font-weight: 800;
+}
+
+.title span {
+    opacity: 0.4;
+}
+
 .right-side-header img {
     width: 18em;
     border-radius: 20px;
@@ -90,6 +116,20 @@ background: #50A0AB;
     gap: 6px;
 }
 
+.both span {
+    background: #EEF7FF;
+    cursor: context-menu;
+    text-align: justify;
+}
+
+.both span i {
+    margin-right: 13px;
+}
+
+.both a {
+    background: #a4acac3d;
+}
+
 .bloc-top, .bloc-bottom {
     display: flex;
     gap: 1em;
@@ -101,9 +141,9 @@ background: #50A0AB;
 
 .bloc-left {
     flex: 1;
-    background: linear-gradient(45deg, #8A8CFF, #e2e2ff);    
+    background: linear-gradient(45deg, #5bdabd, #93ffe6);
     border-radius: 15px;
-    color: #fff;
+    color: #0f4b3e;
     padding: 2em;
 }
 

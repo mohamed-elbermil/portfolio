@@ -1,6 +1,9 @@
 @import url(../../styles/_variables.css);
 .navbar {
-  background-color: var(--c-element);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--c-primary-color);
+  backdrop-filter: blur(41px);
   padding: 1rem 0;
   position: fixed;
   top: 0;
@@ -16,6 +19,11 @@
   margin: 0;
   padding: 0 1em;
   justify-content: end;
+}
+
+.navbar img {
+  width: 6em;
+  margin-left: 1em;
 }
 
 .navbar-item a {

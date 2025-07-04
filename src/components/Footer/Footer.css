@@ -11,7 +11,8 @@
   /* === Footer Global === */
   .footer {
     position: relative;
-    background: linear-gradient(to bottom right, var(--bg-dark), var(--bg-deep));
+    background-color: var(--c-primary-color);
+    backdrop-filter: blur(41px);
     color: var(--text-light);
     padding: 4rem 1.5rem 2rem;
     overflow: hidden;
@@ -55,19 +56,14 @@
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: var(--primary);
     color: white;
     border: none;
     padding: 0.75rem;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 3rem;
     z-index: 2;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .scroll-top-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   
   /* === Layout === */
@@ -96,9 +92,11 @@
     align-items: center;
     margin-bottom: 1rem;
   }
+  .footer__logo img {
+    width: 3em;
+  }
   .footer__logo-icon {
     font-size: 1.5rem;
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
     color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;

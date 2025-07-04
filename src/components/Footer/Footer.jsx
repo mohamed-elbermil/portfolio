@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../assets/images/logo.png'
 import './Footer.css';
 
 const Footer = () => {
@@ -9,27 +10,17 @@ const Footer = () => {
   const services = [
     'Développement Web',
     'Design UI/UX',
-    'Applications Mobile',
+    'Graphisme',
     'Consultation',
     'Maintenance',
     'Support 24/7'
   ];
 
   const quickLinks = [
-    'À propos',
     'Portfolio',
-    'Blog',
+    'À propos',
     'Témoignages',
     'FAQ',
-    'Carrières'
-  ];
-
-  const socialLinks = [
-    { icon: '📘', href: '#', label: 'Facebook' },
-    { icon: '🐦', href: '#', label: 'Twitter' },
-    { icon: '📸', href: '#', label: 'Instagram' },
-    { icon: '💼', href: '#', label: 'LinkedIn' },
-    { icon: '🐙', href: '#', label: 'GitHub' }
   ];
 
   return (
@@ -41,7 +32,7 @@ const Footer = () => {
         className="scroll-top-btn"
         aria-label="Remonter en haut"
       >
-        🔝
+      <i class="fa-regular fa-circle-up"></i>
       </button>
 
       <div className="footer__content">
@@ -49,27 +40,14 @@ const Footer = () => {
           {/* Brand section */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <div className="footer__logo-icon">❤️</div>
-              <h3 className="footer__logo-text">YourBrand</h3>
+              <div className="footer__logo-icon">
+                <img src={Logo} alt="Logo" />
+              </div>
             </div>
             <p className="footer__desc">
               Créons ensemble l'avenir numérique. Solutions innovantes, designs
               exceptionnels, et expériences utilisateur mémorables.
             </p>
-            <div className="footer__socials">
-              {socialLinks.map(({ icon, href, label }, index) => (
-                <a
-                  key={index}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="social-btn"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
@@ -100,50 +78,31 @@ const Footer = () => {
           <div className="footer__col">
             <h4>Contact</h4>
 
+           
+
             <div className="contact-item">
-              <span className="icon">📍</span>
-              <div>
-                <p>123 Rue de l'Innovation</p>
-                <p>75001 Paris, France</p>
-              </div>
+              <span className="icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+33123456789">06 12 17 39 10</a>
             </div>
 
             <div className="contact-item">
-              <span className="icon">📞</span>
-              <a href="tel:+33123456789">+33 1 23 45 67 89</a>
-            </div>
-
-            <div className="contact-item">
-              <span className="icon">📧</span>
-              <a href="mailto:contact@yourbrand.com">
-                contact@yourbrand.com
+              <span className="icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:melbermil@outlook.fr">
+              melbermil@outlook.fr
               </a>
-            </div>
-
-            {/* Newsletter */}
-            <div className="newsletter">
-              <h5>Newsletter</h5>
-              <div className="newsletter__form">
-                <input type="email" placeholder="Votre email" />
-                <button>S'abonner</button>
-              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom section */}
         <div className="footer__bottom">
-          <p>© 2024 YourBrand. Tous droits réservés.</p>
+          <p>© 2025 - Mohamed EL BERMIL. Tous droits réservés.</p>
           <div className="footer__links">
             <a href="#">Politique de confidentialité</a>
             <a href="#">Conditions d'utilisation</a>
             <a href="#">Mentions légales</a>
           </div>
         </div>
-
-        <p className="footer__made">
-          Fait avec ❤️ par YourBrand
-        </p>
       </div>
     </footer>
   );

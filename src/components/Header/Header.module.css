@@ -115,10 +115,11 @@ h1 {
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 3em;
-    margin: 8em 11em;    
+    margin: 0em 11em;
     flex-wrap: wrap;
+    height: 100vh;
   }
   
   .ticket {

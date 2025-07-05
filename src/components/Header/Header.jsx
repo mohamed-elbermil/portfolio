@@ -15,6 +15,14 @@ function Header() {
   const rightRef = useRef(null);
 
   useEffect(() => {
+    // Détecter si on est sur mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    // Si on est sur mobile, ne pas exécuter les animations GSAP
+    if (isMobile) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         leftRef.current.children,
@@ -49,13 +57,27 @@ function Header() {
             start: 'top center',
             end: 'bottom center',
             toggleActions: 'play reverse play reverse',
-            markers: true,
+            markers: false,
           },
         }
       );
     }, headerRef);
   
-    return () => ctx.revert();
+    // Gestionnaire pour les changements de taille d'écran
+    const handleResize = () => {
+      const newIsMobile = window.innerWidth <= 768;
+      if (newIsMobile && !isMobile) {
+        // Si on passe en mode mobile, nettoyer les animations GSAP
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      ctx.revert();
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   
   

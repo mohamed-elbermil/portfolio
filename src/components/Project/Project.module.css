@@ -30,12 +30,26 @@
     background: var(--c-primary-color);
   }
   
+  /* Carousel wrapper */
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+  
   .carousel-container {
     display: flex;
     overflow-x: auto;
     gap: 16px;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
   }
   
   .item {
@@ -117,4 +131,85 @@
     border: 2px solid transparent;
     background-clip: content-box;
   }
+  
+/* Navigation arrows */
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.navArrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.prevArrow {
+  left: -25px;
+}
+
+.nextArrow {
+  right: -25px;
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.indicator.active {
+  background: var(--c-element);
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navArrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .prevArrow {
+    left: -20px;
+  }
+  
+  .nextArrow {
+    right: -20px;
+  }
+  
+  .indicators {
+    margin-top: 1.5rem;
+  }
+}
   

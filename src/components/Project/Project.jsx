@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "./Project.module.css"; // ou .scss si tu utilises Sass
 
 const projects = [
@@ -40,30 +40,69 @@ const projects = [
 ];
 
 const Project = () => {
+  const carouselRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className={styles["game-section"]} id="projects">
       <h2 className={styles["line-title"]}>Mes projets</h2>
-      <div className={styles["carousel-container"]}>
-        {projects.map((game, index) => (
-          <a
-            key={index}
-            href={game.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <div
-              className={styles.item}
-              style={{ backgroundImage: `url(${game.image})` }}
+      
+      <div className={styles["carousel-wrapper"]}>
+        {/* Flèche précédente */}
+        <button 
+          className={`${styles.navArrow} ${styles.prevArrow}`}
+          onClick={scrollLeft}
+          aria-label="Faire défiler vers la gauche"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+
+        {/* Conteneur des projets */}
+        <div className={styles["carousel-container"]} ref={carouselRef}>
+          {projects.map((game, index) => (
+            <a
+              key={index}
+              href={game.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              <div className={styles["item-desc"]}>
-                <h3 className={styles['title']}>{game.title}</h3>
-                <p>{game.description}</p>
+              <div
+                className={styles.item}
+                style={{ backgroundImage: `url(${game.image})` }}
+              >
+                <div className={styles["item-desc"]}>
+                  <h3 className={styles['title']}>{game.title}</h3>
+                  <p>{game.description}</p>
+                </div>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
+
+        {/* Flèche suivante */}
+        <button 
+          className={`${styles.navArrow} ${styles.nextArrow}`}
+          onClick={scrollRight}
+          aria-label="Faire défiler vers la droite"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
       </div>
     </section>
   );

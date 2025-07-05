@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: "DressCode",
-    image: "https://www.yudiz.com/codepen/expandable-animated-card-slider/rdr-2.jpg",
+    image: "https://vinkit.co/content/images/2025/03/dressing-vinted.png",
     description:
       "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
     link:"https://github.com/mohamed-elbermil/DressCode"

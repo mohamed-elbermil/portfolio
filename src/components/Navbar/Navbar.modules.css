@@ -26,6 +26,15 @@
   margin-left: 1em;
 }
 
+.logo-link {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
 .navbar-item a {
   color: #fff;
   text-decoration: none;

@@ -13,6 +13,11 @@ const Navbar = () => {
       </Link>
       <ul className="navbar-list">
         <li className="navbar-item">
+          <Link to="/" className="logo-link">
+            <Link to="/">accueil</Link>
+          </Link>
+        </li>
+        <li className="navbar-item">
           <Link to="/portfolio">réalisations</Link>
         </li>
         <li className="navbar-item">

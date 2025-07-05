@@ -27,12 +27,31 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/a-propos" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/" element={
+            <>
+              <Header />
+              <Home />
+            </>
+          } />
+          <Route path="/a-propos" element={
+            <>
+              <Header />
+              <About />
+            </>
+          } />
+          <Route path="/services" element={
+            <>
+              <Header />
+              <Services />
+            </>
+          } />
+          <Route path="/portfolio" element={
+            <>
+              <Header />
+              <Portfolio />
+            </>
+          } />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -2,7 +2,6 @@
 
 .wrapper {
   min-height: 100vh;
-  padding: 6rem 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -18,7 +17,7 @@
 }
 
 .container {
-  max-width: 48rem;
+  max-width: 60em;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -86,22 +85,13 @@
 }
 
 .faqItem {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.05),
-    0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
+    background: linear-gradient(45deg, #34494e2e, #34494e24);
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
 }
 
 .faqItem:hover {
-  transform: translateY(-1px);
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.05),
-    0 10px 15px rgba(0, 0, 0, 0.1);
   border-color: rgba(59, 130, 246, 0.2);
 }
 
@@ -150,7 +140,7 @@
 }
 
 .questionButton:hover .questionRow h3 {
-  color: #3b82f6;
+  color: #2688a0;
 }
 
 .chevron {
@@ -166,7 +156,7 @@
 }
 
 .answer {
-  padding: 0 1.5rem 1.25rem;
+  padding: 2em;
   border-top: 1px solid rgba(226, 232, 240, 0.8);
   background: rgba(248, 250, 252, 0.5);
   animation: slideDown 0.2s ease-out;

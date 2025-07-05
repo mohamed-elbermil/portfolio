@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import './Services.css';
 
 function Services() {
+  const servicesRef = useRef(null);
+
+  useEffect(() => {
+    // Attendre que les animations du hero soient terminées (environ 2.5 secondes)
+    const timer = setTimeout(() => {
+      if (servicesRef.current) {
+        servicesRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const services = [
     {
       icon: (
@@ -82,7 +98,7 @@ function Services() {
       </section>
 
       {/* Services Section */}
-      <section className="services">
+      <section className="services" ref={servicesRef}>
         <h2 className="section-title">Nos Services</h2>
         <p className="section-description">
           Une gamme complète de services digitaux pour répondre à tous vos besoins
@@ -118,7 +134,6 @@ function Services() {
           <button className="btn-secondary">Planifier un appel</button>
         </div>
       </section>
-
     </div>
   );
 }

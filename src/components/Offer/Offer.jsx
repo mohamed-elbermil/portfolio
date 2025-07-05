@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Offer.module.css';
+import CTALink from '../CTALink/CTALink';
+import '../CTALink/CTALink.css';
 
 function Offer() {
   return (
@@ -33,27 +35,7 @@ function Offer() {
               </p>
             </div>
 
-            <div className={styles.cta}>
-              <div className={styles['cta-button']}>
-                <div className={styles['icon-container']}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={styles['user-icon']}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5.121 17.804A9.001 9.001 0 0112 15a9.001 9.001 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <span>Un besoin design ?</span>
-              </div>
-            </div>
+            <CTALink text="Prendre rendez-vous" href="#contact" />
           </div>
         </div>
       </div>

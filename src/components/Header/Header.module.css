@@ -148,8 +148,12 @@
   margin-top: 0.5rem;
   display: inline-block;
   text-decoration: none;
-  color: var(--c-fitness-area);
+  color: #ffa607;
   font-weight: bold;
+  background: #00353f7a;
+  padding: 11px 16px;
+  border-radius: 34px;
+  line-height: 1;
 }
 
 /* Social Media Icons */

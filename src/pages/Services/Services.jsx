@@ -62,11 +62,11 @@ function Services() {
       <section className="hero">
         <div className="badge">
           <span className="badge-icon">★</span>
-          Services Premium
+          Services
         </div>
         <h1 className="hero-title">
           Transformez votre
-          <span className="highlight">présence numérique</span>
+          <span className="highlight"> présence numérique</span>
         </h1>
         <p className="hero-subtitle">
           Des solutions digitales sur mesure pour propulser votre entreprise vers le succès.
@@ -100,7 +100,6 @@ function Services() {
                   </li>
                 ))}
               </ul>
-              <button className="btn-learn">En savoir plus</button>
             </div>
           ))}
         </div>
@@ -120,10 +119,6 @@ function Services() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 Services Digitaux. Créé avec passion et expertise.</p>
-      </footer>
     </div>
   );
 }

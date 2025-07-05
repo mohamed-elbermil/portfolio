@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 import './Services.css';
 
 const Services = () => {
@@ -31,6 +32,7 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <Navbar />
       <section className="hero-section">
         <div className="container">
           <h1>Mes Services</h1>

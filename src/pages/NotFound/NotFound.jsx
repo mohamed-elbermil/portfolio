@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 import './NotFound.css';
 
 const NotFound = () => {
   return (
     <div className="not-found-page">
+      <Navbar />
       <div className="container">
         <div className="not-found-content">
           <div className="error-code">404</div>

@@ -12,14 +12,17 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 
-// Page d'accueil par défaut
+// Page d'accueil par défaut avec Header
 function Home() {
   return (
-    <main>
-      <Project />
-      <Offer />
-      <FAQ />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Project />
+        <Offer />
+        <FAQ />
+      </main>
+    </>
   );
 }
 
@@ -28,30 +31,10 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/" element={
-            <>
-              <Header />
-              <Home />
-            </>
-          } />
-          <Route path="/a-propos" element={
-            <>
-              <Header />
-              <About />
-            </>
-          } />
-          <Route path="/services" element={
-            <>
-              <Header />
-              <Services />
-            </>
-          } />
-          <Route path="/portfolio" element={
-            <>
-              <Header />
-              <Portfolio />
-            </>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

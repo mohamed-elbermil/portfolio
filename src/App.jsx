@@ -4,7 +4,7 @@ import './reset.css';
 import Header from './components/Header/Header';
 import Project from './components/Project/Project';
 import Offer from './components/Offer/Offer';
-import FAQ from './components/Faq/Faq';
+import FAQ from './components/Faq/Faq.jsx';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';

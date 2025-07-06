@@ -15,6 +15,7 @@
 }
 
 .navbar-item.cta a {
+  z-index: 1;
   color: #222;
   display: flex;
   align-items: center;

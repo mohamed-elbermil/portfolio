@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
+import CTALink from '../../components/CTALink/CTALink';
 import './Services.css';
 
 function Services() {
@@ -77,7 +78,7 @@ function Services() {
       {/* Hero Section */}
       <section className="hero">
         <div className="badge">
-          <span className="badge-icon">★</span>
+          <span className="badge-icon"><i class="fa-solid fa-laptop"></i></span>
           Services
         </div>
         <h1 className="hero-title">
@@ -88,12 +89,8 @@ function Services() {
           Des solutions digitales sur mesure pour propulser votre entreprise vers le succès.
           Expertise technique, créativité et résultats garantis.
         </p>
-        <div className="hero-buttons">
-          <button className="btn-primary">
-            Découvrir nos services
-            <span className="arrow">→</span>
-          </button>
-          <button className="btn-secondary">Voir nos réalisations</button>
+        <div className="hero-chevron">
+          <i className="fas fa-chevron-down chevron-down"></i>
         </div>
       </section>
 
@@ -127,11 +124,12 @@ function Services() {
         <p className="cta-subtitle">
           Discutons de vos besoins et créons ensemble une solution digitale qui vous ressemble.
         </p>
-        <div className="hero-buttons">
-          <button className="btn-primary">
-            Demander un devis <span className="arrow">→</span>
-          </button>
-          <button className="btn-secondary">Planifier un appel</button>
+        <div className="cta-buttons">
+          <CTALink 
+            text="Demander un devis" 
+            href="mailto:melbermil@outlook.fr"
+            icon="fa-solid fa-envelope"
+          />
         </div>
       </section>
     </div>

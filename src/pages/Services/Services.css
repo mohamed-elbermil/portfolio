@@ -61,6 +61,7 @@ body {
 }
 
 .badge {
+  cursor: context-menu;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -71,9 +72,8 @@ body {
   font-weight: 600;
   margin-bottom: 2.5rem;
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(255 255 255 / 44%);
   animation: slideInDown 1s ease-out;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes slideInDown {
@@ -88,14 +88,8 @@ body {
 }
 
 .badge-icon {
-  color: #fbbf24;
+  color: #31474d;
   font-size: 1.2rem;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
 }
 
 .hero-title {
@@ -103,7 +97,6 @@ body {
   font-weight: 900;
   margin-bottom: 2rem;
   line-height: 1.1;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
   animation: slideInUp 1s ease-out 0.3s both;
   background: linear-gradient(45deg, #ffffff, #f1f5f9);
   -webkit-background-clip: text;
@@ -123,7 +116,7 @@ body {
 }
 
 .highlight {
-  background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706);
+  background:#2a3c41;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,7 +130,7 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  background: #2a3c41;
   border-radius: 2px;
   transform: scaleX(0);
   animation: expandWidth 1s ease-out 1s forwards;
@@ -233,6 +226,34 @@ body {
 
 .btn-primary:hover .arrow {
   transform: translateX(6px);
+}
+
+/* Hero Chevron */
+.hero-chevron {
+  margin-top: 3rem;
+  animation: slideInUp 1s ease-out 1.2s both;
+}
+
+.chevron-down {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.chevron-down:hover {
+  color: white;
+  transform: translateY(5px);
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 /* Services Section */
@@ -464,9 +485,18 @@ body {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(17deg, #0c1011 10%, #173f49 100%);
+  background: #10191e;
   color: white;
   padding: 6rem 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta {
   text-align: center;
   position: relative;
   overflow: hidden;

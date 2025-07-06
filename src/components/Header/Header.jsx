@@ -101,7 +101,7 @@ function Header() {
             <a href="cv-mohamed-elbermil.pdf" download className={styles.cvBtn}>
               <i className="fa-solid fa-download"></i> Télécharger le CV
             </a>
-            <a href="#projects" id='projects' className={styles.altBtn}>Voir mes projets</a>
+            <a href="https://calendly.com/melbermil/30min" target='blank' id='projects' className={styles.altBtn}>Réserver une consultation en ligne</a>
           </div>
         </div>
 

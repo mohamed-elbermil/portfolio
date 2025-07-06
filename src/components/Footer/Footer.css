@@ -1,12 +1,4 @@
 /* Variables de base */
-:root {
-    --primary: #3b82f6;
-    --secondary: #9333ea;
-    --text-light: #cbd5e1;
-    --text-dark: #f8fafc;
-    --bg-dark: #0f172a;
-    --bg-deep: #1e293b;
-  }
   
   /* === Footer Global === */
   .footer {
@@ -72,6 +64,7 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
+    color: #fff;
   }
   
   @media (min-width: 768px) {
@@ -82,7 +75,7 @@
   
   @media (min-width: 1024px) {
     .footer__grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   
@@ -202,6 +195,7 @@
   
   /* === Bottom bar === */
   .footer__bottom {
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,6 +213,7 @@
   }
   
   .footer__links {
+    color: #fff;
     display: flex;
     gap: 1.5rem;
   }

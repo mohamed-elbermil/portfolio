@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png'
 import './Footer.css';
 
@@ -7,20 +8,12 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const services = [
-    'Développement Web',
-    'Design UI/UX',
-    'Graphisme',
-    'Consultation',
-    'Maintenance',
-    'Support 24/7'
-  ];
-
   const quickLinks = [
-    'Portfolio',
-    'À propos',
-    'Témoignages',
-    'FAQ',
+    { name: 'Accueil', href: '/' },
+    { name: 'Portfolio', href: '/portfolio' },
+    // { name: 'À propos', href: '/a-propos' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -50,17 +43,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
-          <div className="footer__col">
-            <h4>Services</h4>
-            <ul>
-              {services.map((item, i) => (
-                <li key={i}>
-                  <a href="#">{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           {/* Quick Links */}
           <div className="footer__col">
@@ -68,7 +51,7 @@ const Footer = () => {
             <ul>
               {quickLinks.map((item, i) => (
                 <li key={i}>
-                  <a href="#">{item}</a>
+                  <Link to={item.href}>{item.name}</Link>
                 </li>
               ))}
             </ul>
@@ -98,9 +81,9 @@ const Footer = () => {
         <div className="footer__bottom">
           <p>© 2025 - Mohamed EL BERMIL. Tous droits réservés.</p>
           <div className="footer__links">
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-            <a href="#">Mentions légales</a>
+            <Link to="/politique-confidentialite">Politique de confidentialité</Link>
+            <Link to="/conditions-utilisation">Conditions d'utilisation</Link>
+            <Link to="/mentions-legales">Mentions légales</Link>
           </div>
         </div>
       </div>

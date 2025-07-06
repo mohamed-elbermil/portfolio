@@ -67,7 +67,7 @@ function FAQ() {
           <p>Trouvez rapidement les réponses à vos questions</p>
         </div>
 
-        {/* FAQ Items */}
+        {/* Faq Items */}
         <div className={styles.faqList}>
           {faqData.map((item) => {
             const isActive = activeItems.includes(item.id);

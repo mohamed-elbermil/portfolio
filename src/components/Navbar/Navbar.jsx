@@ -40,9 +40,9 @@ const Navbar = () => {
         <li className="navbar-item">
           <Link to="/portfolio" onClick={closeMenu}>réalisations</Link>
         </li>
-        <li className="navbar-item">
+        {/* <li className="navbar-item">
           <Link to="/a-propos" onClick={closeMenu}>à propos</Link>
-        </li>
+        </li> */}
         <li className="navbar-item">
           <Link to="/services" onClick={closeMenu}>services</Link>
         </li>

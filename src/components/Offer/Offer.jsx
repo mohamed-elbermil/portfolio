@@ -21,17 +21,11 @@ function Offer() {
 
             <div className={styles['text-content']}>
               <h1>
-                Lorem IPSUM<br />
-                Lorem IPSUM<br />
-                Lorem IPSUM<br />
-                Lorem IPSUM
+              Visibilité Optimisée
               </h1>
               <p>
-                Lorem IPSUM Lorem IPSUM Lorem IPSUM Lorem
-                IPSUM Lorem IPSUM Lorem IPSUM Lorem IPSUM Lorem
-                IPSUM Lorem IPSUM Lorem IPSUM Lorem IPSUM Lorem
-                IPSUM Lorem IPSUM Lorem IPSUM Lorem IPSUM Lorem
-                IPSUM
+              Je conçois des sites web élégants, rapides et adaptés à vos besoins.
+              Que vous soyez une entreprise, un indépendant ou une startup, je vous accompagne de la conception à la mise en ligne.
               </p>
             </div>
 

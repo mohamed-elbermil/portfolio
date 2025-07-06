@@ -203,6 +203,26 @@ button[type="submit"]:hover {
   text-decoration: underline;
 }
 
+.successMessage {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #10b981;
+  font-weight: 500;
+}
+
+.errorMessage {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #ef4444;
+  font-weight: 500;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {

@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Navbar from '../../components/Navbar/Navbar';
+import { EMAILJS_CONFIG } from '../../config/emailjs';
 import styles from './Contact.module.css';
 
 function Contact() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -10,6 +13,8 @@ function Contact() {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +26,27 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, form.current, EMAILJS_CONFIG.PUBLIC_KEY)
+      .then((result) => {
+        console.log('SUCCESS!', result.text);
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      }, (error) => {
+        console.log('FAILED...', error.text);
+        setSubmitStatus('error');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -65,7 +90,7 @@ function Contact() {
               <h2>Parlons de votre projet</h2>
               <p>Remplissez le formulaire ci-dessous</p>
 
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className={styles.row}>
                   <input
                     type="text"
@@ -120,7 +145,21 @@ function Contact() {
                   required
                 ></textarea>
 
-                <button type="submit">Envoyer le message</button>
+                <button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                </button>
+
+                {submitStatus === 'success' && (
+                  <div className={styles.successMessage}>
+                    ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className={styles.errorMessage}>
+                    ❌ Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement.
+                  </div>
+                )}
 
                 <p className={styles.disclaimer}>
                   En me contactant, vous acceptez nos <a href="#" className={styles.link}>Conditions d'utilisation</a> et notre <a href="#" className={styles.link}>Politique de confidentialité</a>.

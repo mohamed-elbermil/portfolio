@@ -20,7 +20,7 @@ function Home() {
       <main>
         <Project />
         <Offer />
-        <FAQ />
+        {/* <FAQ /> */}
       </main>
     </>
   );

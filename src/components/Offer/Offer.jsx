@@ -170,7 +170,7 @@ function Offer() {
             </div>
 
             <div ref={ctaRef}>
-              <CTALink text="Prendre rendez-vous" href="#contact" />
+              <CTALink text="Prendre rendez-vous" href="https://calendly.com/melbermil/30min" />
             </div>
           </div>
         </div>

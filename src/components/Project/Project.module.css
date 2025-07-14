@@ -74,7 +74,7 @@
     left: 0;
   }
   .item-desc {
-    padding: 0 24px 12px;
+    padding: 0 24px;
     color: #fff;
     position: relative;
     z-index: 1;
@@ -85,6 +85,8 @@
     opacity: 0;
     transform: translateY(32px);
     transition: all 0.4s ease-in-out 0.2s;
+    font-size: 14px;
+    margin: 24px 0;
   }
   .item:hover {
     min-width: 500px;
@@ -111,7 +113,6 @@
     text-align: center;
     border-radius: 45px;
     backdrop-filter: blur(41px);
-    margin-bottom: 11px;
   }
 
   ::-webkit-scrollbar {

@@ -6,35 +6,35 @@ const projects = [
     title: "Fitness-Area",
     image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png",
     description:
-      "Fitness-Area est un projet initialement développé lors d'un bootcamp en HTML, CSS et JavaScript. Avec le temps, je m'efforce de l'améliorer tant sur le plan esthétique que fonctionnel. Le projet a récemment été migré vers React à des fin d'optimisation",
+      "🏋️Fitness-Area est un projet initialement développé lors d'un bootcamp en HTML, CSS et JavaScript. Avec le temps, je m'efforce de l'améliorer tant sur le plan esthétique que fonctionnel. Le projet a récemment été migré vers React à des fin d'optimisation",
     link:"https://fitness-area-mohamed-e.vercel.app/"
   },
   {
     title: "Netflix",
     image: "https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+      "🍿Le but de ce projet était de reproduire à l'identique l'interface du géant du streaming, Netflix. Initialement réalisé avec HTML/CSS/JS et Bootstrap, le projet a récemment été migré vers React à des fin d'optimisation",
     link:"https://github.com/mohamed-elbermil/netflix-interface"
   },
   {
     title: "DressCode",
     image: "https://vinkit.co/content/images/2025/03/dressing-vinted.png",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+      "🚀Ceci est un projet personnel pour me faciliter la rédaction de mes descriptions de vêtement Vinted par automatisation.",
     link:"https://github.com/mohamed-elbermil/DressCode"
   },
   {
     title: "Miniature Youtube",
     image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+      "🖌️Dans le cadre de ce projet, j'ai mis en oeuvre mes compétences graphiques pour créer des miniatures attractives pour des vidéos Youtube",
     link:"https://www.behance.net/gallery/228643009/Youtubes-Thumbnails"
   },
   {
     title: "Kaza",
     image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+      "💻Dans ce projet, j'ai eu l'occasion de mettre en pratique mes compétences en UX/UI pour réaliser la maquette de l'agence immobilière Kaza.",
     link:"https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere"
   },
 ];

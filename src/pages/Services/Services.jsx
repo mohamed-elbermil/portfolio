@@ -43,7 +43,7 @@ function Services() {
       title: "Développement Web",
       description:
         "Développement de sites web performants et évolutifs avec les dernières technologies pour une expérience utilisateur exceptionnelle.",
-      features: ["React & TypeScript", "Performance optimisée", "SEO-friendly", "Maintenance incluse"]
+      features: ["React","Wordpress", "WebFlow", "Shopify", "Performance optimisée", "SEO-friendly", "Maintenance incluse"]
     },
     {
       icon: (
@@ -67,7 +67,7 @@ function Services() {
       title: "Graphisme",
       description:
         "Création d'identités visuelles percutantes et de supports graphiques qui communiquent efficacement vos valeurs.",
-      features: ["Identité visuelle", "Supports print", "Illustrations", "Charte graphique"]
+      features: ["Identité visuelle", "Supports print", "Illustrations", "Charte graphique", "Logo"]
     }
   ];
 

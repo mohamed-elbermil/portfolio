@@ -213,3 +213,8 @@
   }
 }
   
+@media screen and (max-width:423px) {
+  .game-section {
+    padding: 60px 29px;
+  }
+}

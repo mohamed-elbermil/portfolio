@@ -95,7 +95,7 @@ function Header() {
             Hello, moi c'est <span className={styles.highlight}>Mohamed</span>
           </h1>
           <p className={styles.subtext}>
-            Développeur Front-end passionné. J'aide les marques à créer des interfaces modernes et performantes.
+            Développeur Web passionné. J'aide les entreprises à créer des interfaces <strong>modernes</strong> et <strong>performantes</strong>.
           </p>
           <div className={styles.ctaGroup}>
             <a href="cv-mohamed-elbermil.pdf" download className={styles.cvBtn}>

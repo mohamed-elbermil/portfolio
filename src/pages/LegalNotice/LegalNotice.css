@@ -1,0 +1,73 @@
+
+.legal-notice-container {
+    background: #f8fafc;
+    max-width: 850px;
+    margin: 12.5rem auto;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.legal-notice-container h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.legal-notice-container h2 {
+  font-size: 1.25rem;
+  color: #188fac;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+.legal-notice-container h3 {
+  font-size: 1.08rem;
+  color: #447d8b;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+.legal-notice-container p, .legal-notice-container ul {
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 0.7rem;
+}
+.legal-notice-container ul {
+  padding-left: 1.2rem;
+  margin-top: 0.2rem;
+}
+.legal-notice-container li {
+  margin-bottom: 0.3rem;
+  list-style: disc inside;
+}
+.legal-notice-container a {
+  color: #0ea5e9;
+  text-decoration: underline;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+.legal-notice-container a:hover {
+  color: #2563eb;
+}
+.legal-notice-container .disclaimer {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .legal-notice-container {
+    padding: 1.2rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  .legal-notice-container h1 {
+    font-size: 1.3rem;
+  }
+  .legal-notice-container h2 {
+    font-size: 1.05rem;
+  }
+  .legal-notice-container h3 {
+    font-size: 0.98rem;
+  }
+} 

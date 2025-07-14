@@ -81,8 +81,6 @@ const Footer = () => {
         <div className="footer__bottom">
           <p>© 2025 - Mohamed EL BERMIL. Tous droits réservés.</p>
           <div className="footer__links">
-            <Link to="/politique-confidentialite">Politique de confidentialité</Link>
-            <Link to="/conditions-utilisation">Conditions d'utilisation</Link>
             <Link to="/mentions-legales">Mentions légales</Link>
           </div>
         </div>

@@ -11,6 +11,7 @@ import Services from './pages/Services/Services';
 import Portfolio from './pages/Portfolio/Portfolio';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import LegalNotice from './pages/LegalNotice/LegalNotice';
 
 // Page d'accueil par défaut avec Header
 function Home() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

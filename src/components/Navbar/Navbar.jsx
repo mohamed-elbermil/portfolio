@@ -48,7 +48,7 @@ const Navbar = () => {
         </li>
         <li className="navbar-item">
           <Link to="/contact" onClick={closeMenu}>
-            <CTALink text="un besoin design ?" />
+            <CTALink text="un besoin particulier ?" />
           </Link>
         </li>
       </ul>

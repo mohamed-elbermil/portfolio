@@ -8,12 +8,9 @@
 .container {
   display: flex;
   align-items: center;
-  height: 100vh;
-  padding-top: 6rem;
+  padding: 6em 2em 0 2em;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .grid {
@@ -228,6 +225,8 @@ button[type="submit"]:hover {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
   
   .grid {
@@ -237,7 +236,7 @@ button[type="submit"]:hover {
   }
   
   .leftSection {
-    padding-right: 0;
+    display: none;
   }
   
   .leftSection h1 {
@@ -253,7 +252,20 @@ button[type="submit"]:hover {
   }
   
   .columns {
-    gap: 1rem;
+    display: none;
   }
+}
+
+@media screen and (max-width:1600px) {
+  .container {
+    display: block;
+    padding: 7em 2em;
+  }
+  form {
+    gap: 14px;
+  }
+  textarea {
+    min-height: 60px;
+}
 }
   

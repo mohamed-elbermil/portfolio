@@ -8,6 +8,7 @@
 .container {
   display: flex;
   align-items: center;
+  height: 100vh;
   padding: 6em 2em 0 2em;
   max-width: 1200px;
   margin: 0 auto;

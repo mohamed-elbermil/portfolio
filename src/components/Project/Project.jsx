@@ -21,7 +21,7 @@ const projects = [
     image: "https://vinkit.co/content/images/2025/03/dressing-vinted.png",
     description:
       "🚀Ceci est un projet personnel pour me faciliter la rédaction de mes descriptions de vêtement Vinted par automatisation.",
-    link:"https://github.com/mohamed-elbermil/DressCode"
+    link:"https://dress-code-wheat.vercel.app/"
   },
   {
     title: "Miniature Youtube",

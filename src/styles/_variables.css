@@ -1,13 +1,52 @@
 :root {
-/* Background-Color */
-    --c-primary-color: #193137e0;
-    --c-element: #222;
-    --c-seconday-color:#07ffc6;
-    --c-status: #E1EDED;
-/* Border-radius */
-    --b-border-basic:16px;
-    --b-border-full:60px;
+  /* ── Backgrounds ─────────────────────────────────── */
+  --bg-base:       #060d10;   /* body, page background */
+  --bg-surface:    #0d1f26;   /* cards, sections */
+  --bg-elevated:   #152d38;   /* hover states, modals */
+  --bg-nav:        rgba(6, 13, 16, 0.85); /* navbar transparent */
 
-/* Projects */
-    --c-fitness-area:#FF693A;
+  /* ── Accent (cyan signature) ─────────────────────── */
+  --accent:        #07ffc6;
+  --accent-dim:    rgba(7, 255, 198, 0.10);
+  --accent-glow:   rgba(7, 255, 198, 0.22);
+  --accent-border: rgba(7, 255, 198, 0.20);
+
+  /* ── Text ─────────────────────────────────────────── */
+  --text-primary:  #e8f4f6;
+  --text-muted:    #5d8a95;
+  --text-dim:      #2a4e59;
+
+  /* ── Borders ──────────────────────────────────────── */
+  --border:        rgba(7, 255, 198, 0.10);
+  --border-strong: rgba(7, 255, 198, 0.25);
+
+  /* ── Shadows ──────────────────────────────────────── */
+  --shadow-sm:     0 2px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md:     0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-lg:     0 24px 64px rgba(0, 0, 0, 0.55);
+  --glow-accent:   0 0 40px rgba(7, 255, 198, 0.15);
+
+  /* ── Typography ───────────────────────────────────── */
+  --font-heading:  'Syne', 'Inter', system-ui, sans-serif;
+  --font-body:     'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Legacy aliases (kept for backward compat) ─────── */
+  --c-primary-color:  rgba(13, 31, 38, 0.90);
+  --c-element:        #0d1f26;
+  --c-accent:         #07ffc6;
+  --c-seconday-color: #07ffc6;
+  --c-teal:           #50A0AB;
+  --c-status:         #2a4e59;
+  --primary:          #07ffc6;
+  --secondary:        #50A0AB;
+  --bg-deep:          #060d10;
+  --text-light:       #e8f4f6;
+  --text-dark:        #e8f4f6;
+
+  /* ── Border-radius ────────────────────────────────── */
+  --b-border-basic:   14px;
+  --b-border-full:    60px;
+
+  /* ── Project accent ───────────────────────────────── */
+  --c-fitness-area:   #FF693A;
 }

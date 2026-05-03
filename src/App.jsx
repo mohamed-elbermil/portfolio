@@ -3,8 +3,8 @@ import './reset.css';
 
 import Header from './components/Header/Header';
 import Project from './components/Project/Project';
+import SkillsTicker from './components/SkillsTicker/SkillsTicker';
 import Offer from './components/Offer/Offer';
-// import FAQ from './components/FAQ/Faq.jsx';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
@@ -13,15 +13,14 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import LegalNotice from './pages/LegalNotice/LegalNotice';
 
-// Page d'accueil par défaut avec Header
 function Home() {
   return (
     <>
       <Header />
       <main>
+        <SkillsTicker />
         <Project />
         <Offer />
-        {/* <FAQ /> */}
       </main>
     </>
   );

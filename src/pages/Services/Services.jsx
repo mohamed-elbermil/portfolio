@@ -1,24 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import CTALink from '../../components/CTALink/CTALink';
 import './Services.css';
 
 function Services() {
   const servicesRef = useRef(null);
-
-  useEffect(() => {
-    // Attendre que les animations du hero soient terminées (environ 2.5 secondes)
-    const timer = setTimeout(() => {
-      if (servicesRef.current) {
-        servicesRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const services = [
     {
@@ -78,7 +64,7 @@ function Services() {
       {/* Hero Section */}
       <section className="hero">
         <div className="badge">
-          <span className="badge-icon"><i class="fa-solid fa-laptop"></i></span>
+          <span className="badge-icon"><i className="fa-solid fa-laptop" /></span>
           Services
         </div>
         <h1 className="hero-title">

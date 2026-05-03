@@ -1,54 +1,67 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import './Navbar.modules.css';
 import Logo from '../../assets/images/logo.png';
-import CTALink from '../CTALink/CTALink';
+
+const NAV_LINKS = [
+  { to: '/',          label: 'accueil'     },
+  { to: '/portfolio', label: 'réalisations' },
+  { to: '/services',  label: 'services'    },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled,   setScrolled]   = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  useEffect(() => { setIsMenuOpen(false); }, [location.pathname]);
+
+  const toggleMenu = () => setIsMenuOpen(o => !o);
+
+  const isActive = (path) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
 
   return (
-    <nav className="navbar">
-      <Link to="/" className="logo-link" onClick={closeMenu}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <Link to="/" className="logo-link">
         <img src={Logo} alt="Logo Mohamed EL BERMIL" />
       </Link>
-      
-      {/* Menu hamburger pour mobile */}
-      <button 
+
+      {/* Hamburger */}
+      <button
         className={`hamburger ${isMenuOpen ? 'active' : ''}`}
         onClick={toggleMenu}
-        aria-label="Menu"
+        aria-label="Ouvrir le menu"
+        aria-expanded={isMenuOpen}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </button>
 
       <ul className={`navbar-list ${isMenuOpen ? 'active' : ''}`}>
-        <li className="navbar-item">
-          <Link to="/" onClick={closeMenu}>accueil</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/portfolio" onClick={closeMenu}>réalisations</Link>
-        </li>
-        {/* <li className="navbar-item">
-          <Link to="/a-propos" onClick={closeMenu}>à propos</Link>
-        </li> */}
-        <li className="navbar-item">
-          <Link to="/services" onClick={closeMenu}>services</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/contact" onClick={closeMenu}>
-            <CTALink text="un besoin particulier ?" />
+        {NAV_LINKS.map(({ to, label }) => (
+          <li key={to} className="navbar-item">
+            <Link to={to} className={isActive(to) ? 'active-link' : ''}>
+              {label}
+            </Link>
+          </li>
+        ))}
+
+        {/* CTA — inline to avoid nested <li> */}
+        <li className="navbar-item cta">
+          <Link to="/contact">
+            <div className="cta-icon">
+              <i className="fa-solid fa-paper-plane" />
+            </div>
+            un besoin particulier ?
           </Link>
         </li>
       </ul>

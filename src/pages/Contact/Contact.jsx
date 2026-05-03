@@ -56,16 +56,27 @@ function Contact() {
         <div className={styles.grid}>
           {/* Left Section */}
           <div className={styles.leftSection}>
+            {/* Availability badge */}
+            <div className={styles.availableBadge}>
+              <span className={styles.availableDot} />
+              Disponible pour de nouvelles opportunités
+            </div>
+
             <h1>Contactez-moi</h1>
             <p>
-              Discutons de votre projet et voyons comment je peux vous aider<br />
+              Discutons de votre projet et voyons comment je peux vous aider
               à créer une présence digitale exceptionnelle.
             </p>
 
             <div className={styles.contactInfo}>
-              <div><span className={styles.icon}>📧</span> melbermil@outlook.fr</div>
-              <div><span className={styles.icon}>📞</span> 06 12 17 39 10</div>
-
+              <div>
+                <span className={styles.icon}><i className="fa-solid fa-envelope" /></span>
+                <a href="mailto:melbermil@outlook.fr" className={styles.link}>melbermil@outlook.fr</a>
+              </div>
+              <div>
+                <span className={styles.icon}><i className="fa-solid fa-phone" /></span>
+                <a href="tel:+33612173910" className={styles.link}>06 12 17 39 10</a>
+              </div>
             </div>
 
             <div className={styles.columns}>

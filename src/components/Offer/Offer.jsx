@@ -1,181 +1,59 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import styles from './Offer.module.css';
-import CTALink from '../CTALink/CTALink';
-import '../CTALink/CTALink.css';
 
-// Enregistrer le plugin ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+const SERVICES = [
+  { num: '01', name: 'Web Design',       desc: 'Interfaces modernes, élégantes et orientées conversion.' },
+  { num: '02', name: 'Développement',    desc: 'React, Next.js, WordPress — performant et scalable.'     },
+  { num: '03', name: 'SEO & Visibilité', desc: 'Référencement technique et stratégie de contenu.'        },
+  { num: '04', name: 'Graphisme',        desc: 'Identité visuelle, logo, supports print et digital.'     },
+];
 
 function Offer() {
-  const containerRef = useRef(null);
-  const cardRef = useRef(null);
-  const leftSectionRef = useRef(null);
-  const badgeRef = useRef(null);
-  const titleRef = useRef(null);
-  const textRef = useRef(null);
-  const ctaRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const card = cardRef.current;
-    const leftSection = leftSectionRef.current;
-    const badge = badgeRef.current;
-    const title = titleRef.current;
-    const text = textRef.current;
-    const cta = ctaRef.current;
-
-    // Timeline principale
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container,
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse"
-      }
-    });
-
-    // Animation de la section gauche (gradient overlay)
-    tl.fromTo(leftSection, 
-      { 
-        scale: 0.8, 
-        opacity: 0,
-        rotation: -5
-      },
-      { 
-        scale: 1, 
-        opacity: 1, 
-        rotation: 0,
-        duration: 1.2,
-        ease: "power3.out"
-      }
-    );
-
-    // Animation du badge
-    tl.fromTo(badge,
-      {
-        y: 30,
-        opacity: 0,
-        scale: 0.8
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        ease: "back.out(1.7)"
-      },
-      "-=0.6"
-    );
-
-    // Animation du titre
-    tl.fromTo(title,
-      {
-        y: 40,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.out"
-      },
-      "-=0.4"
-    );
-
-    // Animation du texte
-    tl.fromTo(text,
-      {
-        y: 30,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.out"
-      },
-      "-=0.6"
-    );
-
-    // Animation du CTA
-    tl.fromTo(cta,
-      {
-        y: 20,
-        opacity: 0,
-        scale: 0.9
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        ease: "back.out(1.4)"
-      },
-      "-=0.4"
-    );
-
-    // Animation de hover pour la card
-    const handleMouseEnter = () => {
-      gsap.to(card, {
-        scale: 1.02,
-        duration: 0.3,
-        ease: "power2.out"
-      });
-    };
-
-    const handleMouseLeave = () => {
-      gsap.to(card, {
-        scale: 1,
-        duration: 0.3,
-        ease: "power2.out"
-      });
-    };
-
-    card.addEventListener('mouseenter', handleMouseEnter);
-    card.addEventListener('mouseleave', handleMouseLeave);
-
-    // Cleanup
-    return () => {
-      card.removeEventListener('mouseenter', handleMouseEnter);
-      card.removeEventListener('mouseleave', handleMouseLeave);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
   return (
-    <div className={styles.container} ref={containerRef}>
-      <div className={styles.card} ref={cardRef}>
-        <div className={styles['content-grid']}>
-          {/* Left Section */}
-          <div className={styles['left-section']} ref={leftSectionRef}>
-            <div className={styles['gradient-overlay']}></div>
-          </div>
+    <section className={styles.section}>
+      <div className={styles.inner}>
 
-          {/* Right Section */}
-          <div className={styles['right-section']}>
-            <div className={styles['badge-container']}>
-              <div className={styles.badge} ref={badgeRef}>WEB DESIGN</div>
-            </div>
+        {/* Left: statement */}
+        <div className={styles.left}>
+          <div className={styles.label}>02 · Services</div>
+          <h2 className={styles.headline}>
+            Votre présence<br />
+            en ligne,<br />
+            <span className={styles.accent}>réinventée.</span>
+          </h2>
+        </div>
 
-            <div className={styles['text-content']}>
-              <h1 ref={titleRef}>
-              Visibilité Optimisée
-              </h1>
-              <p ref={textRef}>
-              Je conçois des sites web élégants, rapides et adaptés à vos besoins.
-              Que vous soyez une entreprise, un indépendant ou une startup, je vous accompagne de la conception à la mise en ligne.
-              </p>
-            </div>
-
-            <div ref={ctaRef}>
-              <CTALink text="Prendre rendez-vous" href="https://calendly.com/melbermil/30min" />
-            </div>
+        {/* Right: service list + CTAs */}
+        <div className={styles.right}>
+          <ul className={styles.list}>
+            {SERVICES.map(s => (
+              <li key={s.num} className={styles.listItem}>
+                <span className={styles.num}>{s.num}</span>
+                <div>
+                  <p className={styles.serviceName}>{s.name}</p>
+                  <p className={styles.serviceDesc}>{s.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.cta}>
+            <Link to="/services" className={styles.primaryBtn}>
+              Voir tous les services
+              <i className="fa-solid fa-arrow-right" />
+            </Link>
+            <a
+              href="https://calendly.com/melbermil/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ghostBtn}
+            >
+              Prendre rendez-vous
+            </a>
           </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,111 +1,104 @@
-import React, { useRef } from "react";
-import styles from "./Project.module.css"; // ou .scss si tu utilises Sass
+import { Link } from 'react-router-dom';
+import styles from './Project.module.css';
 
 const projects = [
   {
-    title: "Fitness-Area",
-    image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png",
-    description:
-      "🏋️Fitness-Area est un projet initialement développé lors d'un bootcamp en HTML, CSS et JavaScript. Avec le temps, je m'efforce de l'améliorer tant sur le plan esthétique que fonctionnel. Le projet a récemment été migré vers React à des fin d'optimisation",
-    link:"https://fitness-area-mohamed-e.vercel.app/"
+    title: 'Fitness-Area',
+    tags:  ['React', 'CSS3', 'JavaScript'],
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png',
+    description: 'Interface fitness développée en bootcamp, migrée vers React. Design amélioré et performances optimisées.',
+    link: 'https://fitness-area-mohamed-e.vercel.app/',
   },
   {
-    title: "Netflix",
-    image: "https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg",
-    description:
-      "🍿Le but de ce projet était de reproduire à l'identique l'interface du géant du streaming, Netflix. Initialement réalisé avec HTML/CSS/JS et Bootstrap, le projet a récemment été migré vers React à des fin d'optimisation",
-    link:"https://github.com/mohamed-elbermil/netflix-interface"
+    title: 'Netflix Interface',
+    tags:  ['React', 'Bootstrap', 'JavaScript'],
+    image: 'https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg',
+    description: 'Reproduction pixel-perfect de l\'interface Netflix — migration HTML/CSS vers React.',
+    link: 'https://github.com/mohamed-elbermil/netflix-interface',
   },
   {
-    title: "DressCode",
-    image: "https://vinkit.co/content/images/2025/03/dressing-vinted.png",
-    description:
-      "🚀Ceci est un projet personnel pour me faciliter la rédaction de mes descriptions de vêtement Vinted par automatisation.",
-    link:"https://dress-code-wheat.vercel.app/"
+    title: 'DressCode',
+    tags:  ['React', 'API', 'Automation'],
+    image: 'https://vinkit.co/content/images/2025/03/dressing-vinted.png',
+    description: 'Outil d\'automatisation pour la rédaction de descriptions vestimentaires sur Vinted.',
+    link: 'https://dress-code-wheat.vercel.app/',
   },
   {
-    title: "Miniature Youtube",
-    image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png",
-    description:
-      "🖌️Dans le cadre de ce projet, j'ai mis en oeuvre mes compétences graphiques pour créer des miniatures attractives pour des vidéos Youtube",
-    link:"https://www.behance.net/gallery/228643009/Youtubes-Thumbnails"
+    title: 'Miniatures YouTube',
+    tags:  ['Figma', 'Illustrator', 'Design'],
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png',
+    description: 'Création de miniatures attractives pour YouTube, mettant en valeur mes compétences graphiques.',
+    link: 'https://www.behance.net/gallery/228643009/Youtubes-Thumbnails',
   },
   {
-    title: "Kaza",
-    image: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png",
-    description:
-      "💻Dans ce projet, j'ai eu l'occasion de mettre en pratique mes compétences en UX/UI pour réaliser la maquette de l'agence immobilière Kaza.",
-    link:"https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere"
+    title: 'Kaza — Agence Immo',
+    tags:  ['Figma', 'UI/UX', 'Maquette'],
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png',
+    description: 'Maquette UX/UI complète pour une agence immobilière — parcours utilisateur et prototypage.',
+    link: 'https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere',
   },
 ];
 
-const Project = () => {
-  const carouselRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -400, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 400, behavior: 'smooth' });
-    }
-  };
-
-  return (
-    <section className={styles["game-section"]} id="projects">
-      <h2 className={styles["line-title"]}>Mes projets</h2>
-      
-      <div className={styles["carousel-wrapper"]}>
-        {/* Flèche précédente */}
-        <button 
-          className={`${styles.navArrow} ${styles.prevArrow}`}
-          onClick={scrollLeft}
-          aria-label="Faire défiler vers la gauche"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
-
-        {/* Conteneur des projets */}
-        <div className={styles["carousel-container"]} ref={carouselRef}>
-          {projects.map((game, index) => (
-            <a
-              key={index}
-              href={game.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                className={styles.item}
-                style={{ backgroundImage: `url(${game.image})` }}
-              >
-                <div className={styles["item-desc"]}>
-                  <h3 className={styles['title']}>{game.title}</h3>
-                  <p>{game.description}</p>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Flèche suivante */}
-        <button 
-          className={`${styles.navArrow} ${styles.nextArrow}`}
-          onClick={scrollRight}
-          aria-label="Faire défiler vers la droite"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
-    </section>
-  );
+/* ── 3-D tilt helpers ──────────────────────────────────────── */
+const onTiltMove = (e) => {
+  const card = e.currentTarget;
+  const { left, top, width, height } = card.getBoundingClientRect();
+  const x = (e.clientX - left) / width  - 0.5;
+  const y = (e.clientY - top)  / height - 0.5;
+  card.style.transform =
+    `perspective(900px) rotateX(${y * -10}deg) rotateY(${x * 10}deg) scale(1.025)`;
 };
+
+const onTiltLeave = (e) => {
+  e.currentTarget.style.transform =
+    'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+};
+
+/* ── Component ─────────────────────────────────────────────── */
+const Project = () => (
+  <section className={styles.section} id="projects">
+    <div className={styles.sectionHeader}>
+      <div className={styles.label}>01 · Réalisations</div>
+      <Link to="/portfolio" className={styles.viewAll}>
+        Voir tout <i className="fa-solid fa-arrow-right" />
+      </Link>
+    </div>
+
+    <div className={styles.bento}>
+      {projects.map((project, i) => (
+        <a
+          key={i}
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.item} ${styles[`item${i}`]}`}
+        >
+          <div
+            className={styles.card}
+            style={{ backgroundImage: `url(${project.image})` }}
+            onMouseMove={onTiltMove}
+            onMouseLeave={onTiltLeave}
+          >
+            <div className={styles.overlay}>
+              <div className={styles.overlayContent}>
+                <div className={styles.tags}>
+                  {project.tags.map(tag => (
+                    <span key={tag} className={styles.tag}>{tag}</span>
+                  ))}
+                </div>
+                <h3 className={styles.cardTitle}>{project.title}</h3>
+                <p className={styles.cardDesc}>{project.description}</p>
+                <span className={styles.viewCta}>
+                  Voir le projet
+                  <i className="fa-solid fa-arrow-right" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+);
 
 export default Project;

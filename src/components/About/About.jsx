@@ -1,10 +1,19 @@
 import styles from './About.module.css';
 import Reveal from '../Reveal/Reveal';
+import Profile from '../../assets/images/profile.png';
 
 const FACTS = [
   { label: 'Fondateur', value: 'Agence SOBLIM' },
   { label: 'Expertise', value: 'Développement & Design' },
   { label: 'Disponibilité', value: 'Nouvelles opportunités' },
+];
+
+const HOBBIES = [
+  { label: 'Escalade',     icon: 'fa-solid fa-mountain' },
+  { label: 'Musculation',  icon: 'fa-solid fa-dumbbell' },
+  { label: 'Lecture',      icon: 'fa-solid fa-book-open' },
+  { label: 'Ski',          icon: 'fa-solid fa-person-skiing' },
+  { label: 'Basket',       icon: 'fa-solid fa-basketball' },
 ];
 
 const About = () => (
@@ -17,6 +26,10 @@ const About = () => (
           À propos
         </span>
         <h2 className={styles.title}>Mon parcours</h2>
+
+        <div className={styles.photoWrapper}>
+          <img src={Profile} alt="Portrait de Mohamed EL BERMIL" className={styles.photo} />
+        </div>
       </div>
 
       <Reveal as="div" className={styles.right}>
@@ -38,6 +51,18 @@ const About = () => (
               <span className={styles.factValue}>{fact.value}</span>
             </div>
           ))}
+        </div>
+
+        <div className={styles.hobbies}>
+          <span className={styles.hobbiesLabel}>À côté du travail</span>
+          <div className={styles.hobbiesList}>
+            {HOBBIES.map((hobby) => (
+              <span key={hobby.label} className={styles.hobby}>
+                <i className={hobby.icon} />
+                {hobby.label}
+              </span>
+            ))}
+          </div>
         </div>
       </Reveal>
     </div>

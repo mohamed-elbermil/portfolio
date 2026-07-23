@@ -17,18 +17,18 @@ const NotFound = () => {
             <Link to="/" className="btn-primary">
               Retour à l'accueil
             </Link>
-            <Link to="/contact" className="btn-secondary">
+            <Link to="/#contact" className="btn-secondary">
               Me contacter
             </Link>
           </div>
-          
+
           <div className="suggested-pages">
             <h3>Pages populaires :</h3>
             <ul>
-              <li><Link to="/a-propos">À propos</Link></li>
+              <li><Link to="/#about">À propos</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/portfolio">Portfolio</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/#portfolio">Portfolio</Link></li>
+              <li><Link to="/#contact">Contact</Link></li>
             </ul>
           </div>
         </div>

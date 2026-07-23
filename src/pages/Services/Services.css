@@ -15,8 +15,8 @@
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 70%, rgba(7, 255, 198, 0.04) 0%, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(80, 160, 171, 0.04) 0%, transparent 45%);
+    radial-gradient(circle at 15% 70%, rgba(59, 47, 224, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(224, 86, 47, 0.04) 0%, transparent 45%);
   pointer-events: none;
   z-index: 0;
 }
@@ -25,7 +25,7 @@
 .hero {
   padding: 7rem 2rem 5rem;
   text-align: center;
-  background: linear-gradient(160deg, #060d10 0%, #0d1f26 50%, #0f2a34 100%);
+  background: linear-gradient(160deg, var(--bg-base) 0%, var(--bg-surface) 100%);
   color: var(--text-primary);
   position: relative;
   overflow: hidden;
@@ -45,7 +45,7 @@
   top: -30%;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(7, 255, 198, 0.05) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(59, 47, 224, 0.07) 0%, transparent 65%);
   filter: blur(60px);
   animation: heroGlow 12s ease-in-out infinite alternate;
 }
@@ -81,12 +81,12 @@
 .badge-icon { font-size: 1rem; }
 
 .hero-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
   animation: slideInUp 0.9s ease-out 0.2s both;
 }
@@ -97,7 +97,7 @@
 }
 
 .highlight {
-  background: linear-gradient(125deg, var(--accent) 0%, #50a0ab 100%);
+  background: linear-gradient(125deg, var(--accent) 0%, var(--cat-graphisme) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -111,7 +111,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent), #50a0ab);
+  background: linear-gradient(90deg, var(--accent), var(--cat-graphisme));
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: left;
@@ -161,15 +161,15 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), #50a0ab);
+  background: linear-gradient(90deg, var(--accent), var(--cat-graphisme));
   border-radius: 2px;
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   text-align: center;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
@@ -224,7 +224,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), #50a0ab);
+  background: linear-gradient(90deg, var(--accent), var(--cat-graphisme));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -235,7 +235,7 @@
 .service-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), var(--glow-accent);
+  box-shadow: 0 20px 50px rgba(23, 20, 15, 0.10), var(--glow-accent);
 }
 
 .service-icon {
@@ -266,7 +266,7 @@
 .service-card:hover .service-icon .icon { color: var(--bg-base); }
 
 .service-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -294,7 +294,7 @@
   color: var(--text-muted);
   font-size: 0.87rem;
   font-weight: 500;
-  border-bottom: 1px solid rgba(7, 255, 198, 0.06);
+  border-bottom: 1px solid var(--border);
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
@@ -331,15 +331,15 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 80%, rgba(7, 255, 198, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(80, 160, 171, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(59, 47, 224, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(224, 86, 47, 0.04) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .cta-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
   position: relative;

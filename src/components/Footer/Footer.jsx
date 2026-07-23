@@ -1,23 +1,35 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import './Footer.css';
 
 const quickLinks = [
-  { name: 'Accueil',      href: '/'          },
-  { name: 'Portfolio',    href: '/portfolio'  },
-  { name: 'Services',     href: '/services'   },
-  { name: 'Contact',      href: '/contact'    },
+  { name: 'Accueil',      id: 'home'      },
+  { name: 'Portfolio',    id: 'portfolio' },
+  { name: 'Compétences',  id: 'skills'    },
+  { name: 'À propos',     id: 'about'     },
+  { name: 'Contact',      id: 'contact'   },
+];
+
+const socials = [
+  { label: 'LinkedIn',  icon: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/mohamed-el-bermil-b957861bb/' },
+  { label: 'Behance',   icon: 'fab fa-behance',      href: 'https://www.behance.net/melbi' },
+  { label: 'GitHub',    icon: 'fab fa-github',       href: 'https://github.com/mohamed-elbermil' },
+  { label: 'Instagram', icon: 'fab fa-instagram',    href: 'https://www.instagram.com/soblim_crea/' },
 ];
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const sectionHref = (id) => (isHome ? `#${id}` : `/#${id}`);
 
   return (
     <footer className="footer">
       <div className="footer__background" />
 
       <button onClick={scrollToTop} className="scroll-top-btn" aria-label="Remonter en haut">
-        <i className="fa-regular fa-circle-up" />
+        <i className="fa-solid fa-arrow-up" />
       </button>
 
       <div className="footer__content">
@@ -34,6 +46,10 @@ const Footer = () => {
               Créons ensemble votre présence numérique. Interfaces modernes,
               expériences mémorables, résultats mesurables.
             </p>
+            <a href="/cv-mohamed-elbermil.pdf" download className="footer__cv">
+              <i className="fa-solid fa-download" />
+              Télécharger mon CV
+            </a>
           </div>
 
           {/* Quick links */}
@@ -41,14 +57,15 @@ const Footer = () => {
             <h4>Navigation</h4>
             <ul>
               {quickLinks.map((item) => (
-                <li key={item.href}>
-                  <Link to={item.href}>{item.name}</Link>
+                <li key={item.id}>
+                  <a href={sectionHref(item.id)}>{item.name}</a>
                 </li>
               ))}
+              <li><Link to="/services">Services</Link></li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact + socials */}
           <div className="footer__col">
             <h4>Contact</h4>
             <div className="contact-item">
@@ -58,6 +75,14 @@ const Footer = () => {
             <div className="contact-item">
               <span className="icon"><i className="fa-solid fa-envelope" /></span>
               <a href="mailto:melbermil@outlook.fr">melbermil@outlook.fr</a>
+            </div>
+
+            <div className="footer__socials">
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
+                  <i className={s.icon} />
+                </a>
+              ))}
             </div>
           </div>
         </div>

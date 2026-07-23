@@ -1,0 +1,121 @@
+@import url('./styles/_variables.css');
+
+/* ── Shared layout ────────────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 1.5rem; }
+}
+
+/* ── Numbered section eyebrow (visual thread across sections) ──── */
+.eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.eyebrow .eyebrow__index {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.eyebrow .eyebrow__rule {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+/* ── Badge / chip (skills, category tags) ────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.8rem 1.7rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.btnPrimary:hover {
+  background: #2A20B8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px var(--accent-glow);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-primary);
+  padding: 0.78rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.btnGhost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ── Scroll-reveal utility ───────────────────────────────────────
+   Elements start slightly offset/faded; useReveal() (IntersectionObserver)
+   adds .is-visible once they enter the viewport. Kept intentionally
+   subtle — fade + small rise, no bounce/rotation. */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

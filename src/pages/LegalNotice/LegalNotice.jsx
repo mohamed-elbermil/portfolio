@@ -3,7 +3,7 @@ import './LegalNotice.css';
 import Navbar from '../../components/Navbar/Navbar';
 
 const LegalNotice = () => (
-  <>
+  <div className="legal-notice-page">
     <Navbar/>
     <div className="legal-notice-container">
       <h1>Mentions légales et politique de confidentialité</h1>
@@ -120,7 +120,7 @@ const LegalNotice = () => (
         Ces mentions légales et politique de confidentialité ont été créées sur le site Rocket Lawyer.
       </p>
     </div>
-  </>
+  </div>
 );
 
 export default LegalNotice;

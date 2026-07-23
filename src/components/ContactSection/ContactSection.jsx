@@ -1,10 +1,9 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Navbar from '../../components/Navbar/Navbar';
 import { EMAILJS_CONFIG } from '../../config/emailjs';
-import styles from './Contact.module.css';
+import styles from './ContactSection.module.css';
 
-function Contact() {
+function ContactSection() {
   const form = useRef();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -18,10 +17,7 @@ function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -30,39 +26,33 @@ function Contact() {
     setSubmitStatus(null);
 
     emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, form.current, EMAILJS_CONFIG.PUBLIC_KEY)
-      .then((result) => {
-        console.log('SUCCESS!', result.text);
+      .then(() => {
         setSubmitStatus('success');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      }, (error) => {
-        console.log('FAILED...', error.text);
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+      }, () => {
         setSubmitStatus('error');
       })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
-    <div className={styles.pageContainer}>
-      <Navbar />
+    <section className={styles.section} id="contact">
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Left Section */}
           <div className={styles.leftSection}>
-            {/* Availability badge */}
+            <span className="eyebrow">
+              <span className="eyebrow__index">05</span>
+              <span className="eyebrow__rule" />
+              Contact
+            </span>
+
             <div className={styles.availableBadge}>
               <span className={styles.availableDot} />
               Disponible pour de nouvelles opportunités
             </div>
 
-            <h1>Contactez-moi</h1>
+            <h2 className={styles.heading}>Contactez-moi</h2>
             <p>
               Discutons de votre projet et voyons comment je peux vous aider
               à créer une présence digitale exceptionnelle.
@@ -162,13 +152,13 @@ function Contact() {
 
                 {submitStatus === 'success' && (
                   <div className={styles.successMessage}>
-                    ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                    Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className={styles.errorMessage}>
-                    ❌ Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement.
+                    Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement.
                   </div>
                 )}
 
@@ -180,8 +170,8 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default Contact;
+export default ContactSection;

@@ -1,22 +1,21 @@
 @import url('../../styles/_variables.css');
 
-/* CTALink.css - Style original de la navbar */
 .navbar-item.cta {
-  background: #fff;
+  background: var(--bg-ink);
   padding: 6px 25px 6px 6px;
   border-radius: 70px;
-  transition: .4s;
+  transition: background 0.35s ease;
   display: flex;
   width: fit-content;
 }
 
 .navbar-item.cta:hover {
-  background: var(--c-seconday-color);
+  background: var(--accent);
 }
 
 .navbar-item.cta a {
   z-index: 1;
-  color: #222;
+  color: var(--text-on-ink);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -26,7 +25,7 @@
 }
 
 .cta-icon {
-  background: var(--c-element);
+  background: var(--accent);
   width: 40px;
   height: 40px;
   border-radius: 64px;
@@ -37,7 +36,7 @@
 }
 
 .cta-icon i {
-  color: #fffffff2;
+  color: #fff;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -72,13 +71,13 @@
 /* Version outline */
 .navbar-item.cta.outline a {
   background: transparent;
-  border: 2px solid var(--c-element);
-  color: var(--c-element);
+  border: 2px solid var(--border-strong);
+  color: var(--text-primary);
 }
 
 .navbar-item.cta.outline a:hover {
-  background: var(--c-element);
-  color: #fff;
+  background: var(--text-primary);
+  color: var(--bg-base);
 }
 
 /* Version pour footer */
@@ -88,14 +87,14 @@
 }
 
 .navbar-item.cta.footer-style a {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(245, 243, 236, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-on-ink);
 }
 
 .navbar-item.cta.footer-style a:hover {
-  background: var(--c-element);
-  border-color: var(--c-element);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Responsive */
@@ -104,9 +103,9 @@
     margin-left: 0;
     margin-top: 1rem;
   }
-  
+
   .navbar-item.cta a {
     padding: 10px 18px;
     font-size: 0.9rem;
   }
-} 
+}

@@ -15,7 +15,11 @@ function Offer() {
 
         {/* Left: statement */}
         <div className={styles.left}>
-          <div className={styles.label}>02 · Services</div>
+          <span className="eyebrow">
+            <span className="eyebrow__index">02</span>
+            <span className="eyebrow__rule" />
+            Services
+          </span>
           <h2 className={styles.headline}>
             Votre présence<br />
             en ligne,<br />

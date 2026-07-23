@@ -41,17 +41,21 @@ function Header() {
   return (
     <>
       <Navbar />
-      <header className={styles.header}>
+      <header className={styles.header} id="home">
         <div className={styles.orb1} aria-hidden="true" />
         <div className={styles.orb2} aria-hidden="true" />
 
         {/* Top row */}
         <div className={styles.topRow}>
+          <span className={styles.eyebrow}>
+            <span className={styles.eyebrowIndex}>00</span>
+            <span className={styles.eyebrowRule} />
+            Portfolio
+          </span>
           <div className={styles.available}>
             <span className={styles.availableDot} />
             Disponible pour de nouvelles opportunités
           </div>
-          <span className={styles.topYear}>2025</span>
         </div>
 
         {/* Title block */}
@@ -83,7 +87,7 @@ function Header() {
           <span className={styles.barDivider} aria-hidden="true" />
 
           <div className={styles.ctaGroup}>
-            <a href="#projects" className={styles.primaryBtn}>
+            <a href="#portfolio" className={styles.primaryBtn}>
               Voir mes projets
               <i className="fa-solid fa-arrow-right" />
             </a>

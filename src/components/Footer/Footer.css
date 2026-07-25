@@ -93,7 +93,10 @@
   margin-bottom: 1rem;
 }
 
-.footer__logo img   { width: 40px; filter: brightness(0) invert(1); }
+.footer__logo img {
+    width: 11em;
+    filter: brightness(0) invert(1);
+}
 .footer__logo-icon  { padding: 0.4rem; margin-right: 0.5rem; }
 
 .footer__desc {

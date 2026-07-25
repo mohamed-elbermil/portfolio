@@ -115,6 +115,10 @@
   text-transform: none;
 }
 
+.cta a:hover {
+  color: #fff;
+}
+
 .cta a::after {
   display: none;
 }
@@ -127,16 +131,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 0.35s ease;
+}
+
+.cta:hover .ctaIcon {
+  background: #fff;
 }
 
 .ctaIcon i {
   color: #fff;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s ease;
   font-size: 0.82rem;
 }
 
 .cta:hover .ctaIcon i {
   transform: rotate(20deg);
+  color: var(--accent);
 }
 
 /* ── Hamburger ───────────────────────────────────────────────── */

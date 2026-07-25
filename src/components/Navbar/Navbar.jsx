@@ -87,7 +87,7 @@ const Navbar = () => {
             <div className={styles.ctaIcon}>
               <i className="fa-solid fa-paper-plane" />
             </div>
-            un besoin particulier ?
+            Me contacter
           </a>
         </li>
       </ul>

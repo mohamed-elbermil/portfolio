@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import styles from './Project.module.css';
 
 const CATEGORIES = ['Tous', 'Graphisme', 'Web', 'Vidéo'];
@@ -17,16 +17,8 @@ const projects = [
     category: 'Web',
     tags: ['React', 'Bootstrap', 'JavaScript'],
     image: 'https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg',
-    description: "Reproduction pixel-perfect de l'interface Netflix — migration HTML/CSS vers React.",
+    description: "Reproduction pixel-perfect de l'interface Netflix - migration HTML/CSS vers React.",
     link: 'https://github.com/mohamed-elbermil/netflix-interface',
-  },
-  {
-    title: 'DressCode',
-    category: 'Web',
-    tags: ['React', 'API', 'Automation'],
-    image: 'https://vinkit.co/content/images/2025/03/dressing-vinted.png',
-    description: "Outil d'automatisation pour la rédaction de descriptions vestimentaires sur Vinted.",
-    link: 'https://dress-code-wheat.vercel.app/',
   },
   {
     title: 'Miniatures YouTube',
@@ -37,28 +29,28 @@ const projects = [
     link: 'https://www.behance.net/gallery/228643009/Youtubes-Thumbnails',
   },
   {
-    title: 'Kaza — Agence Immo',
+    title: 'Kaza - Agence Immo',
     category: 'Graphisme',
     tags: ['Figma', 'UI/UX', 'Maquette'],
     image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png',
-    description: 'Maquette UX/UI complète pour une agence immobilière — parcours utilisateur et prototypage.',
+    description: 'Maquette UX/UI complète pour une agence immobilière - parcours utilisateur et prototypage.',
     link: 'https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere',
   },
   {
-    title: '[À COMPLÉTER]',
+    title: 'Fitness-Area Publicité',
     category: 'Vidéo',
-    tags: ['Vidéo'],
-    image: null,
-    description: '[À COMPLÉTER — description du montage vidéo]',
-    link: null,
+    tags: ['Vidéo', 'Motion Design', 'Publicité'],
+    image: 'https://img.youtube.com/vi/pzeNhG7iZhg/maxresdefault.jpg',
+    description: 'Vidéo publicitaire concept pour le projet Fitness-Area - montage et motion design.',
+    link: 'https://www.youtube.com/watch?v=pzeNhG7iZhg',
   },
   {
-    title: '[À COMPLÉTER]',
+    title: 'Fitness Area Pub',
     category: 'Vidéo',
-    tags: ['Vidéo'],
-    image: null,
-    description: '[À COMPLÉTER — description du montage vidéo]',
-    link: null,
+    tags: ['Vidéo', 'Motion Design', 'Publicité'],
+    image: 'https://img.youtube.com/vi/So04TFZkLEE/maxresdefault.jpg',
+    description: 'Deuxième vidéo publicitaire concept pour Fitness-Area - montage et motion design.',
+    link: 'https://www.youtube.com/watch?v=So04TFZkLEE',
   },
 ];
 

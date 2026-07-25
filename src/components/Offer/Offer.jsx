@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import styles from './Offer.module.css';
 
 const SERVICES = [
   { num: '01', name: 'Web Design',       desc: 'Interfaces modernes, élégantes et orientées conversion.' },
-  { num: '02', name: 'Développement',    desc: 'React, Next.js, WordPress — performant et scalable.'     },
+  { num: '02', name: 'Développement',    desc: 'React, Next.js, WordPress - performant et scalable.'     },
   { num: '03', name: 'SEO & Visibilité', desc: 'Référencement technique et stratégie de contenu.'        },
   { num: '04', name: 'Graphisme',        desc: 'Identité visuelle, logo, supports print et digital.'     },
 ];

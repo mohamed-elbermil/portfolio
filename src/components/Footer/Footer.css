@@ -1,6 +1,6 @@
-@import url('../../styles/_variables.css');
+﻿@import url('../../styles/_variables.css');
 
-/* ── Footer wrapper — reversed contrast bookend ───────────────── */
+/* ── Footer wrapper - reversed contrast bookend ───────────────── */
 .footer {
   position: relative;
   background: var(--bg-ink);

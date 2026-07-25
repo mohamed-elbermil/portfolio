@@ -1,4 +1,4 @@
-@import url('../../styles/_variables.css');
+﻿@import url('../../styles/_variables.css');
 
 /* ── Section ─────────────────────────────────────────────────── */
 .section {
@@ -106,7 +106,7 @@
   gap: 1.75rem 1.5rem;
 }
 
-/* ── Card — shared ───────────────────────────────────────────── */
+/* ── Card - shared ───────────────────────────────────────────── */
 .card {
   display: block;
   text-decoration: none;
@@ -152,7 +152,7 @@
 
 .thumbPlaceholder i { font-size: 1.6rem; opacity: 0.6; }
 
-/* Overlay — tags reveal on hover */
+/* Overlay - tags reveal on hover */
 .thumbOverlay {
   position: absolute;
   inset: 0;
@@ -203,7 +203,7 @@
 .viewCta i { font-size: 0.68rem; transition: transform 0.2s ease; }
 .card:hover .viewCta i { transform: translate(2px, -2px); }
 
-/* Caption — always visible below thumbnail */
+/* Caption - always visible below thumbnail */
 .caption {
   padding-top: 0.85rem;
 }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import './reset.css';
 
@@ -54,7 +54,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
 
-          {/* Legacy routes — content now lives in anchored Home sections */}
+          {/* Legacy routes - content now lives in anchored Home sections */}
           <Route path="/a-propos" element={<Navigate to="/#about" replace />} />
           <Route path="/portfolio" element={<Navigate to="/#portfolio" replace />} />
           <Route path="/contact" element={<Navigate to="/#contact" replace />} />

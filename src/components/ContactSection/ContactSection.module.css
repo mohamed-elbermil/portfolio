@@ -1,4 +1,4 @@
-@import url('../../styles/_variables.css');
+﻿@import url('../../styles/_variables.css');
 
 /* ── Section ─────────────────────────────────────────────────── */
 .section {
@@ -130,7 +130,7 @@
   line-height: 1.55;
 }
 
-/* ── Right section — Form ────────────────────────────────────── */
+/* ── Right section - Form ────────────────────────────────────── */
 .rightSection {
   display: flex;
   justify-content: center;

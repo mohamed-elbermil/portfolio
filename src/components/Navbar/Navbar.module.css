@@ -1,4 +1,4 @@
-@import url(../../styles/_variables.css);
+﻿@import url(../../styles/_variables.css);
 
 /* ── Base navbar ─────────────────────────────────────────────── */
 .navbar {
@@ -15,7 +15,7 @@
   transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Scrolled state — frosted glass */
+/* Scrolled state - frosted glass */
 .scrolled {
   background: var(--bg-nav);
   backdrop-filter: blur(20px);

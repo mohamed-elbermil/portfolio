@@ -1,6 +1,6 @@
-:root {
-  /* ── Backgrounds — "Atelier clair" ───────────────────────────── */
-  --bg-base:       #F7F4EF;   /* warm paper — body background */
+﻿:root {
+  /* ── Backgrounds - "Atelier clair" ───────────────────────────── */
+  --bg-base:       #F7F4EF;   /* warm paper - body background */
   --bg-surface:    #EFEAE1;   /* alternating section background */
   --bg-elevated:   #E7E1D3;   /* cards / hover states */
   --bg-ink:        #14120F;   /* reversed-contrast blocks (footer, CTA banners) */

@@ -1,5 +1,10 @@
 @import url('../../styles/_variables.css');
 
+.soblim {
+  color: #ff8800;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
 .section {
   background: var(--bg-base);
   padding: 7rem 6vw;

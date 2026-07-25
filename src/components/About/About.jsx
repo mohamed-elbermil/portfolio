@@ -39,7 +39,7 @@ const About = () => (
           numériques exceptionnelles.
         </p>
         <p className={styles.text}>
-          Fondateur de l'agence SOBLIM, je m'efforce d'aider les entreprises
+          Fondateur de <a href="https://soblim.com/" target="_blank" rel="noopener noreferrer" className={styles.soblim}>l'agence SOBLIM</a>, je m'efforce d'aider les entreprises
           à se démarquer dans l'univers digital avec des solutions innovantes
           et des designs mémorables.
         </p>

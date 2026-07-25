@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+﻿import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import './Footer.css';
 
@@ -89,7 +89,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="footer__bottom">
-          <p>© 2025 — Mohamed EL BERMIL. Tous droits réservés.</p>
+          <p>© 2025 - Mohamed EL BERMIL. Tous droits réservés.</p>
           <div className="footer__links">
             <Link to="/mentions-legales">Mentions légales</Link>
           </div>

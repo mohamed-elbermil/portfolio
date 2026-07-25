@@ -1,4 +1,4 @@
-@import url('./styles/_variables.css');
+﻿@import url('./styles/_variables.css');
 
 /* ── Shared layout ────────────────────────────────────────────── */
 .container {
@@ -99,7 +99,7 @@
 /* ── Scroll-reveal utility ───────────────────────────────────────
    Elements start slightly offset/faded; useReveal() (IntersectionObserver)
    adds .is-visible once they enter the viewport. Kept intentionally
-   subtle — fade + small rise, no bounce/rotation. */
+   subtle - fade + small rise, no bounce/rotation. */
 .reveal {
   opacity: 0;
   transform: translateY(22px);

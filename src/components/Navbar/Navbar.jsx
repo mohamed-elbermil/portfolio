@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
@@ -26,7 +26,7 @@ const Navbar = () => {
 
   useEffect(() => { setIsMenuOpen(false); }, [location.pathname]);
 
-  /* Scrollspy — only relevant on the single-page Home */
+  /* Scrollspy - only relevant on the single-page Home */
   useEffect(() => {
     if (!isHome) return;
     const targets = SECTIONS
@@ -81,7 +81,7 @@ const Navbar = () => {
           </li>
         ))}
 
-        {/* CTA — inline to avoid nested <li> */}
+        {/* CTA - inline to avoid nested <li> */}
         <li className={`${styles.navbarItem} ${styles.cta}`}>
           <a href={sectionHref('contact')}>
             <div className={styles.ctaIcon}>

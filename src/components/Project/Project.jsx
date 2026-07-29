@@ -1,58 +1,7 @@
 ﻿import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Project.module.css';
-
-const CATEGORIES = ['Tous', 'Graphisme', 'Web', 'Vidéo'];
-
-const projects = [
-  {
-    title: 'Fitness-Area',
-    category: 'Web',
-    tags: ['React', 'CSS3', 'JavaScript'],
-    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png',
-    description: 'Interface fitness développée en bootcamp, migrée vers React. Design amélioré et performances optimisées.',
-    link: 'https://fitness-area-mohamed-e.vercel.app/',
-  },
-  {
-    title: 'Netflix Interface',
-    category: 'Web',
-    tags: ['React', 'Bootstrap', 'JavaScript'],
-    image: 'https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg',
-    description: "Reproduction pixel-perfect de l'interface Netflix - migration HTML/CSS vers React.",
-    link: 'https://github.com/mohamed-elbermil/netflix-interface',
-  },
-  {
-    title: 'Miniatures YouTube',
-    category: 'Graphisme',
-    tags: ['Figma', 'Illustrator', 'Design'],
-    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png',
-    description: 'Création de miniatures attractives pour YouTube, mettant en valeur mes compétences graphiques.',
-    link: 'https://www.behance.net/gallery/228643009/Youtubes-Thumbnails',
-  },
-  {
-    title: 'Kaza - Agence Immo',
-    category: 'Graphisme',
-    tags: ['Figma', 'UI/UX', 'Maquette'],
-    image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png',
-    description: 'Maquette UX/UI complète pour une agence immobilière - parcours utilisateur et prototypage.',
-    link: 'https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere',
-  },
-  {
-    title: 'Fitness-Area Publicité',
-    category: 'Vidéo',
-    tags: ['Vidéo', 'Motion Design', 'Publicité'],
-    image: 'https://img.youtube.com/vi/pzeNhG7iZhg/maxresdefault.jpg',
-    description: 'Vidéo publicitaire concept pour le projet Fitness-Area - montage et motion design.',
-    link: 'https://www.youtube.com/watch?v=pzeNhG7iZhg',
-  },
-  {
-    title: 'Fitness Area Pub',
-    category: 'Vidéo',
-    tags: ['Vidéo', 'Motion Design', 'Publicité'],
-    image: 'https://img.youtube.com/vi/So04TFZkLEE/maxresdefault.jpg',
-    description: 'Deuxième vidéo publicitaire concept pour Fitness-Area - montage et motion design.',
-    link: 'https://www.youtube.com/watch?v=So04TFZkLEE',
-  },
-];
+import { CATEGORIES, projects } from '../../data/projects';
 
 const catClass = (category) => ({
   Graphisme: styles.catGraphisme,
@@ -81,10 +30,8 @@ function Card({ project, index, view }) {
   }, []);
 
   const isPlaceholder = !project.link;
-  const Tag = isPlaceholder ? 'div' : 'a';
-  const linkProps = isPlaceholder
-    ? {}
-    : { href: project.link, target: '_blank', rel: 'noopener noreferrer' };
+  const Tag = isPlaceholder ? 'div' : Link;
+  const linkProps = isPlaceholder ? {} : { to: `/portfolio/${project.slug}` };
 
   return (
     <Tag

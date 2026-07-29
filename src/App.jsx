@@ -9,6 +9,7 @@ import Skills from './components/Skills/Skills';
 import About from './components/About/About';
 import ContactSection from './components/ContactSection/ContactSection';
 import Services from './pages/Services/Services';
+import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import LegalNotice from './pages/LegalNotice/LegalNotice';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/portfolio/:slug" element={<ProjectDetail />} />
 
           {/* Legacy routes - content now lives in anchored Home sections */}
           <Route path="/a-propos" element={<Navigate to="/#about" replace />} />

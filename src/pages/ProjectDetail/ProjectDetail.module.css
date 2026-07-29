@@ -30,7 +30,6 @@
 .hero {
   border-radius: var(--b-border-basic);
   overflow: hidden;
-  border: 1px solid var(--border);
   background: var(--bg-surface);
   margin-bottom: 2.5rem;
 }

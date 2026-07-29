@@ -69,7 +69,7 @@ function Header() {
           </h1>
 
           <div className={styles.photoWrapper} aria-hidden="true">
-            <img src={Profile} alt="" className={styles.photo} />
+            <div className={styles.image} style={{ backgroundImage: `url(${Profile})` }} />
             <div className={styles.photoFade} />
           </div>
         </div>

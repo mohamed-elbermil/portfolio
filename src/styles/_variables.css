@@ -46,4 +46,13 @@
 
   /* ── Layout ───────────────────────────────────────────────────── */
   --container-max: 1240px;
+  --page-inset:    6vw; /* shared horizontal inset - keeps navbar & header content aligned */
+}
+
+@media (max-width: 900px) {
+  :root { --page-inset: 4vw; }
+}
+
+@media (max-width: 640px) {
+  :root { --page-inset: 1.5rem; }
 }

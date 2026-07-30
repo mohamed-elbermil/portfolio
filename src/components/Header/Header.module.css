@@ -157,7 +157,7 @@
 
 .accentChar {
   color: var(--accent);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   display: inline;
 }

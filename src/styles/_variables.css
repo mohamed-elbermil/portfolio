@@ -37,7 +37,7 @@
   --glow-accent:   0 0 40px rgba(59, 47, 224, 0.15);
 
   /* ── Typography ───────────────────────────────────────────────── */
-  --font-heading:  'Fraunces', 'Georgia', serif;
+  --font-heading:  'Cormorant Garamond', 'Georgia', serif;
   --font-body:     'Inter', system-ui, -apple-system, sans-serif;
 
   /* ── Border-radius ────────────────────────────────────────────── */

@@ -23,7 +23,7 @@ const NotFound = () => {
           </div>
 
           <div className="suggested-pages">
-            <h3>Pages populaires :</h3>
+            <h2>Pages populaires :</h2>
             <ul>
               <li><Link to="/#about">À propos</Link></li>
               <li><Link to="/services">Services</Link></li>

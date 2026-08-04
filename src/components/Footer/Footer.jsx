@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Quick links */}
           <div className="footer__col">
-            <h4>Navigation</h4>
+            <h3>Navigation</h3>
             <ul>
               {quickLinks.map((item) => (
                 <li key={item.id}>
@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Contact + socials */}
           <div className="footer__col">
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <div className="contact-item">
               <span className="icon"><i className="fa-solid fa-phone" /></span>
               <a href="tel:+33612173910">06 12 17 39 10</a>

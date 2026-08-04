@@ -21,7 +21,7 @@
   /* ── Text ─────────────────────────────────────────────────────── */
   --text-primary:  #17140F;
   --text-muted:    #6B6558;
-  --text-dim:      #A39C8C;
+  --text-dim:      #6C6658; /* darkened from #A39C8C: original failed WCAG AA contrast (~2.5:1) on light backgrounds */
   --text-on-ink:   #F5F3EC;
   --text-on-ink-muted: rgba(245, 243, 236, 0.62);
 

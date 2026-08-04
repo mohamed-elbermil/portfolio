@@ -94,7 +94,7 @@
   transform: translateY(-2px);
 }
 
-.suggested-pages h3 {
+.suggested-pages h2 {
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 600;

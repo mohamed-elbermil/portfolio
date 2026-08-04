@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import { projects } from '../../data/projects';
@@ -29,10 +29,22 @@ function NotFoundInline() {
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
+  const [lightboxSrc, setLightboxSrc] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  useEffect(() => {
+    if (!lightboxSrc) return;
+    const onKeyDown = (e) => { if (e.key === 'Escape') setLightboxSrc(null); };
+    document.addEventListener('keydown', onKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxSrc]);
 
   if (!project) return <NotFoundInline />;
 
@@ -128,13 +140,17 @@ function ProjectDetail() {
                   <div
                     key={src}
                     className={`${styles.galleryItem} ${i === 0 ? styles.galleryBig : ''}`}
+                    onClick={() => setLightboxSrc(src)}
                   >
                     <img src={src} alt="" className={styles.galleryImg} />
                   </div>
                 ))
               ) : (
                 <>
-                  <div className={`${styles.galleryItem} ${styles.galleryBig}`}>
+                  <div
+                    className={`${styles.galleryItem} ${styles.galleryBig}`}
+                    onClick={() => setLightboxSrc(project.image)}
+                  >
                     <img src={project.image} alt="" className={styles.galleryImg} />
                   </div>
                   <div className={styles.galleryItem}>
@@ -168,6 +184,24 @@ function ProjectDetail() {
           </div>
         </div>
       </div>
+
+      {lightboxSrc && (
+        <div className={styles.lightbox} onClick={() => setLightboxSrc(null)}>
+          <button
+            className={styles.lightboxClose}
+            onClick={() => setLightboxSrc(null)}
+            aria-label="Fermer l'aperçu"
+          >
+            <i className="fa-solid fa-xmark" />
+          </button>
+          <img
+            src={lightboxSrc}
+            alt=""
+            className={styles.lightboxImg}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }

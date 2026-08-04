@@ -8,7 +8,8 @@
       "Bash(node -e ' *)",
       "Read(//c/Users/moham/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/**)",
       "Bash(npx playwright *)",
-      "Bash(node \"C:\\\\Users\\\\moham\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--xampp-htdocs-portfolio\\\\35853fab-59d1-4af8-bbef-d3b139d108ee\\\\scratchpad\\\\shot.js\")"
+      "Bash(node \"C:\\\\Users\\\\moham\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--xampp-htdocs-portfolio\\\\35853fab-59d1-4af8-bbef-d3b139d108ee\\\\scratchpad\\\\shot.js\")",
+      "WebFetch(domain:formasecret.fr)"
     ]
   }
 }

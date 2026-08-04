@@ -5,10 +5,28 @@ import fitnessAreaPricing from "../assets/images/projects/fitness-area-pricing.p
 import miniatureYoutube1 from "../assets/images/projects/miniature-1.png";
 import miniatureYoutube2 from "../assets/images/projects/miniature-2.png";
 import miniatureYoutube3 from "../assets/images/projects/miniature-4.png";
+import formasecretHero from "../assets/images/projects/formasecret-hero.png";
+import formasecretThumb from "../assets/images/projects/miniature-formasecret.png";
+import formasecretFormations from "../assets/images/projects/format-secret-1.png";
+import formasecretTitresPro from "../assets/images/projects/format-secret-2.png";
 
 export const CATEGORIES = ["Tous", "Graphisme", "Web", "Vidéo"];
 
 export const projects = [
+    {
+    slug: "formasecret",
+    title: "FormaSecret",
+    category: "Web",
+    tags: ["React", "CSS3", "JavaScript"],
+    image: formasecretThumb,
+    description:
+      "Refonte du site vitrine de FormaSecret, organisme de formation certifié Qualiopi (management, vente & efficacité professionnelle) - migration HTML/CSS/JS vers React.",
+    problem:
+      "Le site de FormaSecret était à l'origine développé en HTML, CSS et JavaScript. En tant qu'organisme de formation certifié Qualiopi, son contenu évolue régulièrement (fiches formations, avis clients, indicateurs de confiance), ce qui rendait la maintenance de plus en plus lourde sur cette base statique. L'enjeu de la refonte était de migrer l'ensemble du site vers React pour découper l'interface en composants réutilisables et fiabiliser les mises à jour futures, tout en conservant l'identité visuelle et la clarté du parcours déjà en place.",
+    year: "2026",
+    gallery: [formasecretHero, formasecretFormations, formasecretTitresPro],
+    link: "https://formasecret.fr/",
+  },
   {
     slug: "fitness-area",
     title: "Fitness-Area",
@@ -99,4 +117,5 @@ export const projects = [
     year: "2022",
     link: "https://www.youtube.com/watch?v=So04TFZkLEE",
   },
+
 ];

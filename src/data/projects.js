@@ -31,8 +31,12 @@ export const projects = [
       "https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg",
     description:
       "Reproduction pixel-perfect de l'interface Netflix - migration HTML/CSS vers React.",
-    problem: "[À COMPLÉTER — problématique du projet]",
-    year: "[À COMPLÉTER]",
+    problem:
+      "Ce projet a d'abord été réalisé en HTML, CSS et JavaScript, avec les bases que j'avais à l'époque, avant d'être entièrement repris en React. La difficulté principale a été de découper une interface pensée à l'origine comme un ensemble de pages statiques en composants réutilisables, tout en recréant proprement la gestion des états (survols, carrousels, affichage dynamique des contenus) qui reposait auparavant sur du JavaScript directement lié au DOM. Cette migration m'a demandé de repenser la structure du projet plutôt que de simplement traduire le code existant, et m'a permis de mieux comprendre la logique des composants et du state en React.",
+    year: "2025",
+    gallery: [
+      "https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg",
+    ],
     link: "https://github.com/mohamed-elbermil/netflix-interface",
   },
   {
@@ -44,7 +48,8 @@ export const projects = [
       "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png",
     description:
       "Création de miniatures attractives pour YouTube, mettant en valeur mes compétences graphiques.",
-    problem: "[À COMPLÉTER — problématique du projet]",
+    problem:
+      "La création de miniatures percutantes demandait une bibliothèque d'assets graphiques (icônes, textures, éléments détourés) que je ne possédais pas au démarrage du projet. Ce manque de ressources visuelles a failli ralentir la production et menaçait l'homogénéité des miniatures. L'enjeu était de constituer rapidement une base d'éléments réutilisables et cohérents, tout en conservant un fort impact visuel capable de maximiser le taux de clic malgré ces contraintes de temps et de moyens.",
     year: "2025",
     link: "https://www.behance.net/gallery/228643009/Youtubes-Thumbnails",
   },
@@ -57,7 +62,8 @@ export const projects = [
       "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png",
     description:
       "Maquette UX/UI complète pour une agence immobilière - parcours utilisateur et prototypage.",
-    problem: "[À COMPLÉTER — problématique du projet]",
+    problem:
+      "Le site devait présenter une offre immobilière riche (biens, filtres, fiches détaillées) sans jamais devenir illisible pour les personnes malvoyantes ou peu à l'aise avec le digital. Les maquettes existantes du secteur reposaient souvent sur de petites typographies, des contrastes faibles et des parcours de recherche complexes. L'enjeu était de concevoir une plateforme immobilière accessible dès la maquette (contrastes renforcés, hiérarchie typographique claire, parcours de recherche simplifié) sans sacrifier la richesse d'information attendue sur ce type de plateforme.",
     year: "[À COMPLÉTER]",
     link: "https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere",
   },
@@ -67,9 +73,11 @@ export const projects = [
     category: "Vidéo",
     tags: ["Vidéo", "Motion Design", "Publicité"],
     image: "https://img.youtube.com/vi/pzeNhG7iZhg/maxresdefault.jpg",
+    videoEmbed: "https://www.youtube.com/embed/pzeNhG7iZhg",
     description:
       "Vidéo publicitaire concept pour le projet Fitness-Area - montage et motion design.",
-    problem: "[À COMPLÉTER — problématique du projet]",
+    problem:
+      "Le marché du fitness est saturé de publicités qui se ressemblent toutes : mêmes codes visuels, mêmes promesses, même énergie forcée. L'enjeu de cette vidéo était de créer un concept publicitaire qui sorte du lot pour Fitness-Area, en misant sur un montage dynamique et un motion design distinctif capable de capter l'attention en quelques secondes, tout en restant fidèle à l'identité de la marque.",
     year: "2022",
     link: "https://www.youtube.com/watch?v=pzeNhG7iZhg",
   },
@@ -79,9 +87,11 @@ export const projects = [
     category: "Vidéo",
     tags: ["Vidéo", "Motion Design", "Publicité"],
     image: "https://img.youtube.com/vi/So04TFZkLEE/maxresdefault.jpg",
+    videoEmbed: "https://www.youtube.com/embed/So04TFZkLEE",
     description:
       "Deuxième vidéo publicitaire concept pour Fitness-Area - montage et motion design.",
-    problem: "[À COMPLÉTER — problématique du projet]",
+    problem:
+      "Pour cette deuxième vidéo, la difficulté était de trouver le bon équilibre entre motivation et pression : donner envie de se dépasser sans tomber dans un discours culpabilisant qui pourrait décourager les clients potentiels. Le travail de montage et de motion design devait porter un message positif et engageant, capable de donner envie de franchir le pas sans jouer sur la pression physique ou l'urgence.",
     year: "2022",
     link: "https://www.youtube.com/watch?v=So04TFZkLEE",
   },

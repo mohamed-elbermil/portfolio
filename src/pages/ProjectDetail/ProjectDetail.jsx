@@ -109,36 +109,50 @@ function ProjectDetail() {
             Galerie
           </span>
 
-          <div className={styles.gallery}>
-            {project.gallery && project.gallery.length > 0 ? (
-              project.gallery.map((src, i) => (
-                <div
-                  key={src}
-                  className={`${styles.galleryItem} ${i === 0 ? styles.galleryBig : ''}`}
-                >
-                  <img src={src} alt="" className={styles.galleryImg} />
-                </div>
-              ))
-            ) : (
-              <>
-                <div className={`${styles.galleryItem} ${styles.galleryBig}`}>
-                  <img src={project.image} alt="" className={styles.galleryImg} />
-                </div>
-                <div className={styles.galleryItem}>
-                  <div className={styles.galleryPlaceholder}>
-                    <i className="fa-solid fa-image" />
-                    <span>À compléter</span>
+          {project.videoEmbed ? (
+            <div className={styles.videoWrapper}>
+              <iframe
+                src={project.videoEmbed}
+                title={project.title}
+                className={styles.videoFrame}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            <div className={styles.gallery}>
+              {project.gallery && project.gallery.length > 0 ? (
+                project.gallery.map((src, i) => (
+                  <div
+                    key={src}
+                    className={`${styles.galleryItem} ${i === 0 ? styles.galleryBig : ''}`}
+                  >
+                    <img src={src} alt="" className={styles.galleryImg} />
                   </div>
-                </div>
-                <div className={styles.galleryItem}>
-                  <div className={styles.galleryPlaceholder}>
-                    <i className="fa-solid fa-image" />
-                    <span>À compléter</span>
+                ))
+              ) : (
+                <>
+                  <div className={`${styles.galleryItem} ${styles.galleryBig}`}>
+                    <img src={project.image} alt="" className={styles.galleryImg} />
                   </div>
-                </div>
-              </>
-            )}
-          </div>
+                  <div className={styles.galleryItem}>
+                    <div className={styles.galleryPlaceholder}>
+                      <i className="fa-solid fa-image" />
+                      <span>À compléter</span>
+                    </div>
+                  </div>
+                  <div className={styles.galleryItem}>
+                    <div className={styles.galleryPlaceholder}>
+                      <i className="fa-solid fa-image" />
+                      <span>À compléter</span>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Closing CTA */}

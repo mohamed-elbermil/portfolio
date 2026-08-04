@@ -233,7 +233,7 @@
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
-  filter: grayscale(100%) contrast(1.05) brightness(1.03);
+  filter: brightness(1.16);
   opacity: 0.9;
 }
 

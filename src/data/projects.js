@@ -2,6 +2,9 @@ import fitnessAreaBanner from "../assets/images/projects/fitness-area-banner.png
 import fitnessAreaHero from "../assets/images/projects/fitness-area-hero.png";
 import fitnessAreaCta from "../assets/images/projects/fitness-area-cta.png";
 import fitnessAreaPricing from "../assets/images/projects/fitness-area-pricing.png";
+import miniatureYoutube1 from "../assets/images/projects/miniature-1.png";
+import miniatureYoutube2 from "../assets/images/projects/miniature-2.png";
+import miniatureYoutube3 from "../assets/images/projects/miniature-4.png";
 
 export const CATEGORIES = ["Tous", "Graphisme", "Web", "Vidéo"];
 
@@ -51,6 +54,7 @@ export const projects = [
     problem:
       "La création de miniatures percutantes demandait une bibliothèque d'assets graphiques (icônes, textures, éléments détourés) que je ne possédais pas au démarrage du projet. Ce manque de ressources visuelles a failli ralentir la production et menaçait l'homogénéité des miniatures. L'enjeu était de constituer rapidement une base d'éléments réutilisables et cohérents, tout en conservant un fort impact visuel capable de maximiser le taux de clic malgré ces contraintes de temps et de moyens.",
     year: "2025",
+    gallery: [miniatureYoutube1, miniatureYoutube2, miniatureYoutube3],
     link: "https://www.behance.net/gallery/228643009/Youtubes-Thumbnails",
   },
   {

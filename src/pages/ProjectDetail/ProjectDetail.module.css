@@ -39,6 +39,7 @@
   max-height: 16em;
   object-fit: cover;
   display: block;
+  filter: saturate(0.3);
 }
 
 /* ── Header row ──────────────────────────────────────────────── */
@@ -215,9 +216,9 @@
 .galleryImg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  background: #0b0b0b;
 }
 
 .galleryPlaceholder {

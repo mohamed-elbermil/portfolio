@@ -5,6 +5,8 @@ import fitnessAreaPricing from "../assets/images/projects/fitness-area-pricing.p
 import miniatureYoutube1 from "../assets/images/projects/miniature-1.png";
 import miniatureYoutube2 from "../assets/images/projects/miniature-2.png";
 import miniatureYoutube3 from "../assets/images/projects/miniature-4.png";
+import miniatureYoutube4 from "../assets/images/projects/behance-1.png";
+import miniatureYoutube5 from "../assets/images/projects/behance-2.png";
 import formasecretHero from "../assets/images/projects/formasecret-hero.png";
 import formasecretThumb from "../assets/images/projects/miniature-formasecret.png";
 import formasecretFormations from "../assets/images/projects/format-secret-1.png";
@@ -72,7 +74,7 @@ export const projects = [
     problem:
       "La création de miniatures percutantes demandait une bibliothèque d'assets graphiques (icônes, textures, éléments détourés) que je ne possédais pas au démarrage du projet. Ce manque de ressources visuelles a failli ralentir la production et menaçait l'homogénéité des miniatures. L'enjeu était de constituer rapidement une base d'éléments réutilisables et cohérents, tout en conservant un fort impact visuel capable de maximiser le taux de clic malgré ces contraintes de temps et de moyens.",
     year: "2025",
-    gallery: [miniatureYoutube1, miniatureYoutube2, miniatureYoutube3],
+    gallery: [miniatureYoutube1, miniatureYoutube2, miniatureYoutube3, miniatureYoutube4, miniatureYoutube5],
     link: "https://www.behance.net/gallery/228643009/Youtubes-Thumbnails",
   },
   {

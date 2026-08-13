@@ -121,6 +121,18 @@ function ProjectDetail() {
             Galerie
           </span>
 
+          {project.compareEmbed && (
+            <div className={styles.compareWrapper}>
+              <iframe
+                src={project.compareEmbed}
+                title={project.title}
+                className={`juxtapose ${styles.compareFrame}`}
+                frameBorder="0"
+                scrolling="no"
+              />
+            </div>
+          )}
+
           {project.videoEmbed ? (
             <div className={styles.videoWrapper}>
               <iframe
@@ -139,7 +151,7 @@ function ProjectDetail() {
                 project.gallery.map((src, i) => (
                   <div
                     key={src}
-                    className={`${styles.galleryItem} ${i === 0 ? styles.galleryBig : ''}`}
+                    className={`${styles.galleryItem} ${i === 0 && !project.compareEmbed ? styles.galleryBig : ''}`}
                     onClick={() => setLightboxSrc(src)}
                   >
                     <img src={src} alt="" className={styles.galleryImg} />

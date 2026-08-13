@@ -76,6 +76,7 @@ export const projects = [
     problem:
       "La création de miniatures percutantes demandait une bibliothèque d'assets graphiques (icônes, textures, éléments détourés) que je ne possédais pas au démarrage du projet. Ce manque de ressources visuelles a failli ralentir la production et menaçait l'homogénéité des miniatures. L'enjeu était de constituer rapidement une base d'éléments réutilisables et cohérents, tout en conservant un fort impact visuel capable de maximiser le taux de clic malgré ces contraintes de temps et de moyens.",
     year: "2025",
+    compareEmbed: "https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=26822d68-96f1-11f1-ba1b-0e6f42328d7d",
     gallery: [miniatureYoutube1, miniatureYoutube2, miniatureYoutube3, miniatureYoutube4, miniatureYoutube5, miniatureYoutube6, miniatureYoutube7],
     link: "https://www.behance.net/gallery/228643009/Youtubes-Thumbnails",
   },

@@ -133,7 +133,7 @@ export const projects = [
     title: "Pool Room",
     category: "Graphisme",
     tags: ["3D", "Blender", "Architecture d'intérieur"],
-    image: poolRoom3,
+    image: poolRoom2,
     description:
       "Rendu 3D d'une salle de piscine intérieure - exploration de volumes organiques, carrelage et lumière naturelle.",
     problem:

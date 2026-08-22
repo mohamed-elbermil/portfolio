@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import styles from './About.module.css';
 import Reveal from '../Reveal/Reveal';
 import Profile from '../../assets/images/profile.png';
+import MusculationPhoto from '../../assets/images/projects/musculation.png';
+import EscaladePhoto from '../../assets/images/projects/escalade.png';
+import SkiPhoto from '../../assets/images/projects/ski.png';
+import LecturePhoto from '../../assets/images/projects/lecture.png';
 
 const FACTS = [
   { label: 'Fondateur', value: 'Agence SOBLIM' },
@@ -9,14 +14,17 @@ const FACTS = [
 ];
 
 const HOBBIES = [
-  { label: 'Escalade',     icon: 'fa-solid fa-mountain' },
-  { label: 'Musculation',  icon: 'fa-solid fa-dumbbell' },
-  { label: 'Lecture',      icon: 'fa-solid fa-book-open' },
-  { label: 'Ski',          icon: 'fa-solid fa-person-skiing' },
-  { label: 'Basket',       icon: 'fa-solid fa-basketball' },
+  { label: 'Escalade',     icon: 'fa-solid fa-mountain',        image: EscaladePhoto },
+  { label: 'Musculation',  icon: 'fa-solid fa-dumbbell',        image: MusculationPhoto },
+  { label: 'Lecture',      icon: 'fa-solid fa-book-open',       image: LecturePhoto },
+  { label: 'Ski',          icon: 'fa-solid fa-person-skiing',   image: SkiPhoto },
+  { label: 'Basket',       icon: 'fa-solid fa-basketball',      image: null },
 ];
 
-const About = () => (
+const About = () => {
+  const [activeHobby, setActiveHobby] = useState(null);
+
+  return (
   <section className={styles.section} id="about">
     <div className={styles.grid}>
       <div className={styles.left}>
@@ -56,17 +64,41 @@ const About = () => (
         <div className={styles.hobbies}>
           <span className={styles.hobbiesLabel}>À côté du travail</span>
           <div className={styles.hobbiesList}>
-            {HOBBIES.map((hobby) => (
-              <span key={hobby.label} className={styles.hobby}>
+            {HOBBIES.map((hobby, i) => (
+              <span
+                key={hobby.label}
+                className={styles.hobby}
+                onMouseEnter={() => setActiveHobby(i)}
+                onMouseLeave={() => setActiveHobby(null)}
+              >
                 <i className={hobby.icon} />
                 {hobby.label}
               </span>
             ))}
           </div>
+
+          <div className={styles.hobbyPreview}>
+            {HOBBIES.map((hobby, i) => hobby.image && (
+              <img
+                key={hobby.label}
+                src={hobby.image}
+                alt={hobby.label}
+                className={`${styles.hobbyPreviewImg} ${activeHobby === i ? styles.hobbyPreviewImgActive : ''}`}
+              />
+            ))}
+
+            {(activeHobby === null || !HOBBIES[activeHobby].image) && (
+              <div className={styles.hobbyPreviewHint}>
+                <i className={activeHobby === null ? 'fa-solid fa-arrow-up' : HOBBIES[activeHobby].icon} />
+                {activeHobby === null ? 'Survolez une activité' : 'Photo à venir'}
+              </div>
+            )}
+          </div>
         </div>
       </Reveal>
     </div>
   </section>
-);
+  );
+};
 
 export default About;

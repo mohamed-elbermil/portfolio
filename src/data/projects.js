@@ -102,20 +102,6 @@ export const projects = [
     link: "https://www.behance.net/gallery/228643009/Youtubes-Thumbnails",
   },
   {
-    slug: "kaza-agence-immo",
-    title: "Kaza - Agence Immo",
-    category: "Graphisme",
-    tags: ["Figma", "UI/UX", "Maquette"],
-    image:
-      "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/f20352228694521.Y3JvcCw5NjcsNzU3LDE5OCw5NQ.png",
-    description:
-      "Maquette UX/UI complète pour une agence immobilière - parcours utilisateur et prototypage.",
-    problem:
-      "Le site devait présenter une offre immobilière riche (biens, filtres, fiches détaillées) sans jamais devenir illisible pour les personnes malvoyantes ou peu à l'aise avec le digital. Les maquettes existantes du secteur reposaient souvent sur de petites typographies, des contrastes faibles et des parcours de recherche complexes. L'enjeu était de concevoir une plateforme immobilière accessible dès la maquette (contrastes renforcés, hiérarchie typographique claire, parcours de recherche simplifié) sans sacrifier la richesse d'information attendue sur ce type de plateforme.",
-    year: "[À COMPLÉTER]",
-    link: "https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere",
-  },
-  {
     slug: "the-boss-nft",
     title: "The Boss — Collection NFT",
     category: "Graphisme",

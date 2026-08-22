@@ -47,11 +47,6 @@ function ContactSection() {
               Contact
             </span>
 
-            <div className={styles.availableBadge}>
-              <span className={styles.availableDot} />
-              Disponible pour de nouvelles opportunités
-            </div>
-
             <h2 className={styles.heading}>Contactez-moi</h2>
             <p>
               Discutons de votre projet et voyons comment je peux vous aider
@@ -66,21 +61,6 @@ function ContactSection() {
               <div>
                 <span className={styles.icon}><i className="fa-solid fa-phone" /></span>
                 <a href="tel:+33612173910" className={styles.link}>06 12 17 39 10</a>
-              </div>
-            </div>
-
-            <div className={styles.columns}>
-              <div>
-                <h3>Développement Web</h3>
-                <p>Sites web modernes, applications et solutions e-commerce sur mesure pour votre entreprise.</p>
-              </div>
-              <div>
-                <h3>Design UI/UX</h3>
-                <p>Interfaces utilisateur intuitives et expériences utilisateur optimisées pour vos projets.</p>
-              </div>
-              <div>
-                <h3>Consultation</h3>
-                <p>Accompagnement stratégique pour optimiser votre présence digitale et atteindre vos objectifs.</p>
               </div>
             </div>
           </div>
@@ -161,10 +141,6 @@ function ContactSection() {
                     Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement.
                   </div>
                 )}
-
-                <p className={styles.disclaimer}>
-                  En me contactant, vous acceptez nos <a href="#" className={styles.link}>Conditions d'utilisation</a> et notre <a href="#" className={styles.link}>Politique de confidentialité</a>.
-                </p>
               </form>
             </div>
           </div>

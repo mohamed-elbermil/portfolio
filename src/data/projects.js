@@ -41,7 +41,8 @@ export const projects = [
     slug: "fitness-area",
     title: "Fitness-Area",
     category: "Web",
-    tags: ["React", "CSS3", "JavaScript"],
+    categories: ["Graphisme", "Web", "Vidéo"],
+    tags: ["React", "CSS3", "JavaScript", "Motion Design"],
     image:
       "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png",
     heroImage: fitnessAreaBanner,
@@ -51,6 +52,20 @@ export const projects = [
       "Le site d'origine, conçu en HTML/CSS, manquait d'impact et d'ergonomie. La présentation des formules manquait de clarté, la hiérarchie visuelle était floue et l'accès à la séance découverte n'était pas assez mis en valeur. L'enjeu était de restructurer l'interface pour rendre la lecture plus fluide (clarification des tarifs, mise en avant des avantages et retravail des appels à l'action) tout en migrant le projet sous React pour le rendre plus performant et plus simple à maintenir.",
     year: "2021 - 2022",
     gallery: [fitnessAreaHero, fitnessAreaCta, fitnessAreaPricing],
+    videos: [
+      {
+        embed: "https://www.youtube.com/embed/pzeNhG7iZhg",
+        title: "Vidéo publicitaire",
+        description:
+          "Le marché du fitness est saturé de publicités qui se ressemblent toutes : mêmes codes visuels, mêmes promesses, même énergie forcée. L'enjeu de cette vidéo était de créer un concept publicitaire qui sorte du lot pour Fitness-Area, en misant sur un montage dynamique et un motion design distinctif.",
+      },
+      {
+        embed: "https://www.youtube.com/embed/So04TFZkLEE",
+        title: "Motion design",
+        description:
+          "Deuxième vidéo concept, cette fois avec pour enjeu de trouver le bon équilibre entre motivation et pression : donner envie de se dépasser sans tomber dans un discours culpabilisant, à travers un travail de montage et de motion design.",
+      },
+    ],
     link: "https://fitness-area-mohamed-e.vercel.app/",
   },
   {
@@ -101,34 +116,6 @@ export const projects = [
     link: "https://www.behance.net/gallery/228694521/Kaza-Agence-Immobiliere",
   },
   {
-    slug: "fitness-area-publicite",
-    title: "Fitness-Area Publicité",
-    category: "Vidéo",
-    tags: ["Vidéo", "Motion Design", "Publicité"],
-    image: "https://img.youtube.com/vi/pzeNhG7iZhg/maxresdefault.jpg",
-    videoEmbed: "https://www.youtube.com/embed/pzeNhG7iZhg",
-    description:
-      "Vidéo publicitaire concept pour le projet Fitness-Area - montage et motion design.",
-    problem:
-      "Le marché du fitness est saturé de publicités qui se ressemblent toutes : mêmes codes visuels, mêmes promesses, même énergie forcée. L'enjeu de cette vidéo était de créer un concept publicitaire qui sorte du lot pour Fitness-Area, en misant sur un montage dynamique et un motion design distinctif capable de capter l'attention en quelques secondes, tout en restant fidèle à l'identité de la marque.",
-    year: "2022",
-    link: "https://www.youtube.com/watch?v=pzeNhG7iZhg",
-  },
-  {
-    slug: "fitness-area-pub",
-    title: "Fitness Area Pub",
-    category: "Vidéo",
-    tags: ["Vidéo", "Motion Design", "Publicité"],
-    image: "https://img.youtube.com/vi/So04TFZkLEE/maxresdefault.jpg",
-    videoEmbed: "https://www.youtube.com/embed/So04TFZkLEE",
-    description:
-      "Deuxième vidéo publicitaire concept pour Fitness-Area - montage et motion design.",
-    problem:
-      "Pour cette deuxième vidéo, la difficulté était de trouver le bon équilibre entre motivation et pression : donner envie de se dépasser sans tomber dans un discours culpabilisant qui pourrait décourager les clients potentiels. Le travail de montage et de motion design devait porter un message positif et engageant, capable de donner envie de franchir le pas sans jouer sur la pression physique ou l'urgence.",
-    year: "2022",
-    link: "https://www.youtube.com/watch?v=So04TFZkLEE",
-  },
-  {
     slug: "the-boss-nft",
     title: "The Boss — Collection NFT",
     category: "Graphisme",
@@ -142,13 +129,13 @@ export const projects = [
     galleryFramed: true,
     gallery: [theBossPostOriginal, theBossChaine, theBossStickers],
     videos: [
+      { src: theBossTeasing, label: "Teaser de lancement", featured: true },
       {
         src: theBossFinale,
         title: "Making-of du dessin",
         description:
           "Capture de ma session de travail en direct, du premier coup de crayon jusqu'aux finitions du personnage - pour montrer le processus de création, pas seulement le résultat final.",
       },
-      { src: theBossTeasing, label: "Teaser de lancement", featured: true },
     ],
   },
 ];

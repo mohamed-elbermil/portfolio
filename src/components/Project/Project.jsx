@@ -76,7 +76,7 @@ const Project = () => {
 
   const filtered = category === 'Tous'
     ? projects
-    : projects.filter(p => p.category === category);
+    : projects.filter(p => (p.categories || [p.category]).includes(category));
 
   return (
     <section className={styles.section} id="portfolio">

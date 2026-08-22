@@ -40,6 +40,9 @@
   object-fit: cover;
   display: block;
   filter: saturate(0.3);
+}
+
+.heroImgFramed {
   object-position: 50% 4%;
 }
 

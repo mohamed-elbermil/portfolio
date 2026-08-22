@@ -62,7 +62,11 @@ function ProjectDetail() {
 
         {/* Hero */}
         <div className={styles.hero}>
-          <img src={project.heroImage || project.image} alt="" className={styles.heroImg} />
+          <img
+            src={project.heroImage || project.image}
+            alt=""
+            className={`${styles.heroImg} ${project.galleryFramed ? styles.heroImgFramed : ''}`}
+          />
         </div>
 
         {/* Header row: title + meta */}
@@ -190,17 +194,30 @@ function ProjectDetail() {
 
           {project.videos && project.videos.length > 0 && (
             <div className={styles.videosGrid}>
-              {project.videos.map((video) =>
-                video.title || video.description ? (
-                  <div key={video.src} className={styles.videoFeatureRow}>
-                    <div className={styles.videoWrapper}>
-                      <video
-                        src={video.src}
-                        controls
-                        preload="metadata"
-                        className={styles.videoFrame}
-                      />
-                    </div>
+              {project.videos.map((video) => {
+                const key = video.src || video.embed;
+                const media = video.embed ? (
+                  <iframe
+                    src={video.embed}
+                    title={video.title || project.title}
+                    className={styles.videoFrame}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                ) : (
+                  <video
+                    src={video.src}
+                    controls
+                    preload="metadata"
+                    className={styles.videoFrame}
+                  />
+                );
+
+                return video.title || video.description ? (
+                  <div key={key} className={styles.videoFeatureRow}>
+                    <div className={styles.videoWrapper}>{media}</div>
                     <div className={styles.videoFeatureText}>
                       {video.title && <h3 className={styles.videoFeatureTitle}>{video.title}</h3>}
                       {video.description && (
@@ -210,21 +227,14 @@ function ProjectDetail() {
                   </div>
                 ) : (
                   <div
-                    key={video.src}
+                    key={key}
                     className={`${styles.videoItem} ${video.featured ? styles.videoItemFeatured : ''}`}
                   >
-                    <div className={styles.videoWrapper}>
-                      <video
-                        src={video.src}
-                        controls
-                        preload="metadata"
-                        className={styles.videoFrame}
-                      />
-                    </div>
+                    <div className={styles.videoWrapper}>{media}</div>
                     {video.label && <p className={styles.videoLabel}>{video.label}</p>}
                   </div>
-                )
-              )}
+                );
+              })}
             </div>
           )}
         </div>

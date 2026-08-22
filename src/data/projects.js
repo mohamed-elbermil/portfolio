@@ -19,6 +19,10 @@ import theBossChaine from "../assets/images/projects/big-rose-chaine.png";
 import theBossStickers from "../assets/images/projects/big-rose-stickers.png";
 import theBossFinale from "../assets/images/projects/finale.mp4";
 import theBossTeasing from "../assets/images/projects/teasing-making-of-the-boss.mp4";
+import poolRoom1 from "../assets/images/projects/pool1.png";
+import poolRoom2 from "../assets/images/projects/pool2.png";
+import poolRoom3 from "../assets/images/projects/pool3.png";
+import poolRoom4 from "../assets/images/projects/pool4.png";
 
 export const CATEGORIES = ["Tous", "Graphisme", "Web", "Vidéo"];
 
@@ -123,5 +127,26 @@ export const projects = [
           "Capture de ma session de travail en direct, du premier coup de crayon jusqu'aux finitions du personnage - pour montrer le processus de création, pas seulement le résultat final.",
       },
     ],
+  },
+  {
+    slug: "pool-room",
+    title: "Pool Room",
+    category: "Graphisme",
+    tags: ["3D", "Blender", "Architecture d'intérieur"],
+    image: poolRoom3,
+    description:
+      "Rendu 3D d'une salle de piscine intérieure - exploration de volumes organiques, carrelage et lumière naturelle.",
+    problem:
+      "L'objectif de ce projet était de modéliser et d'éclairer une salle de piscine intérieure entièrement en 3D, en misant sur des volumes organiques (murs arrondis, escalier en colimaçon) plutôt que sur une architecture classique à angles droits. Le principal défi technique résidait dans le rendu réaliste de l'eau et du carrelage sous une lumière naturelle changeante, pour obtenir une ambiance à la fois épurée et apaisante, proche d'un rendu architectural professionnel.",
+    year: "2026",
+    galleryEven: true,
+    gallery: [poolRoom3, poolRoom1, poolRoom4, poolRoom2],
+    sketchfab: {
+      embed: "https://sketchfab.com/models/ce51d806d78b4074bc4caffb6663d76e/embed?autostart=1",
+      title: "poolroom",
+      modelUrl: "https://sketchfab.com/3d-models/poolroom-ce51d806d78b4074bc4caffb6663d76e",
+      author: "mohamed.elbermil69780",
+      authorUrl: "https://sketchfab.com/mohamed.elbermil69780",
+    },
   },
 ];

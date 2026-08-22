@@ -239,6 +239,47 @@ function ProjectDetail() {
           )}
         </div>
 
+        {/* 3D model (Sketchfab) */}
+        {project.sketchfab && (
+          <div className={styles.modelSection}>
+            <span className="eyebrow">
+              <span className="eyebrow__index">+</span>
+              <span className="eyebrow__rule" />
+              Modèle 3D interactif
+            </span>
+
+            <div className={styles.modelWrapper}>
+              <iframe
+                title={project.sketchfab.title}
+                src={project.sketchfab.embed}
+                className={styles.modelFrame}
+                frameBorder="0"
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowFullScreen
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                xr-spatial-tracking="true"
+                execution-while-out-of-viewport="true"
+                execution-while-not-rendered="true"
+                web-share="true"
+              />
+            </div>
+            <p className={styles.modelCredit}>
+              <a href={project.sketchfab.modelUrl} target="_blank" rel="noopener noreferrer nofollow">
+                {project.sketchfab.title}
+              </a>{' '}
+              par{' '}
+              <a href={project.sketchfab.authorUrl} target="_blank" rel="noopener noreferrer nofollow">
+                {project.sketchfab.author}
+              </a>{' '}
+              sur{' '}
+              <a href="https://sketchfab.com" target="_blank" rel="noopener noreferrer nofollow">
+                Sketchfab
+              </a>
+            </p>
+          </div>
+        )}
+
         {/* Closing CTA */}
         <div className={styles.closing}>
           <p className={styles.closingText}>Envie d'en voir plus&nbsp;?</p>

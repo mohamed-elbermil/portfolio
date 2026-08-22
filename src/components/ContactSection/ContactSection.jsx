@@ -42,7 +42,7 @@ function ContactSection() {
           {/* Left Section */}
           <div className={styles.leftSection}>
             <span className="eyebrow">
-              <span className="eyebrow__index">05</span>
+              <span className="eyebrow__index">04</span>
               <span className="eyebrow__rule" />
               Contact
             </span>

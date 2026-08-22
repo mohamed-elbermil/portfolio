@@ -60,7 +60,7 @@ const Skills = () => (
   <section className={styles.section} id="skills">
     <div className={styles.header}>
       <span className="eyebrow">
-        <span className="eyebrow__index">03</span>
+        <span className="eyebrow__index">02</span>
         <span className="eyebrow__rule" />
         Compétences
       </span>

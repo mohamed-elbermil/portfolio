@@ -4,7 +4,6 @@ import './reset.css';
 
 import Header from './components/Header/Header';
 import Project from './components/Project/Project';
-import Offer from './components/Offer/Offer';
 import Skills from './components/Skills/Skills';
 import About from './components/About/About';
 import ContactSection from './components/ContactSection/ContactSection';
@@ -20,7 +19,6 @@ function Home() {
       <Header />
       <main>
         <Project />
-        <Offer />
         <Skills />
         <About />
         <ContactSection />

@@ -21,7 +21,7 @@ const About = () => (
     <div className={styles.grid}>
       <div className={styles.left}>
         <span className="eyebrow">
-          <span className="eyebrow__index">04</span>
+          <span className="eyebrow__index">03</span>
           <span className="eyebrow__rule" />
           À propos
         </span>

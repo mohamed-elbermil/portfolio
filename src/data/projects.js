@@ -13,6 +13,12 @@ import formasecretHero from "../assets/images/projects/formasecret-hero.png";
 import formasecretThumb from "../assets/images/projects/miniature-formasecret.png";
 import formasecretFormations from "../assets/images/projects/format-secret-1.png";
 import formasecretTitresPro from "../assets/images/projects/format-secret-2.png";
+import theBossPost from "../assets/images/projects/big-pink.png";
+import theBossPostOriginal from "../assets/images/projects/big-pink-original.png";
+import theBossChaine from "../assets/images/projects/big-rose-chaine.png";
+import theBossStickers from "../assets/images/projects/big-rose-stickers.png";
+import theBossFinale from "../assets/images/projects/finale.mp4";
+import theBossTeasing from "../assets/images/projects/teasing-making-of-the-boss.mp4";
 
 export const CATEGORIES = ["Tous", "Graphisme", "Web", "Vidéo"];
 
@@ -122,5 +128,27 @@ export const projects = [
     year: "2022",
     link: "https://www.youtube.com/watch?v=So04TFZkLEE",
   },
-
+  {
+    slug: "the-boss-nft",
+    title: "The Boss — Collection NFT",
+    category: "Graphisme",
+    tags: ["Illustration", "NFT", "Motion Design"],
+    image: theBossPost,
+    description:
+      "Création d'un personnage NFT, \"The Boss\" - design du personnage, déclinaisons en produits dérivés et vidéos de présentation.",
+    problem:
+      "Le projet consistait à créer un personnage capable de porter à lui seul une collection NFT : un visuel assez fort pour fonctionner en PFP, mais aussi se décliner sur des produits dérivés (stickers, bijoux) sans perdre en reconnaissabilité. Au-delà de l'illustration, l'enjeu était de présenter le personnage de façon vivante, à travers une vidéo de reveal et un making-of retraçant les étapes de création, pour raconter le processus autant que le résultat.",
+    year: "2026",
+    galleryFramed: true,
+    gallery: [theBossPostOriginal, theBossChaine, theBossStickers],
+    videos: [
+      {
+        src: theBossFinale,
+        title: "Making-of du dessin",
+        description:
+          "Capture de ma session de travail en direct, du premier coup de crayon jusqu'aux finitions du personnage - pour montrer le processus de création, pas seulement le résultat final.",
+      },
+      { src: theBossTeasing, label: "Teaser de lancement", featured: true },
+    ],
+  },
 ];

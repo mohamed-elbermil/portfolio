@@ -93,9 +93,11 @@ function ProjectDetail() {
                 ))}
               </div>
             </div>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>
-              Voir en ligne <i className="fa-solid fa-arrow-up-right" />
-            </a>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.metaLink}>
+                Voir en ligne <i className="fa-solid fa-arrow-up-right" />
+              </a>
+            )}
           </div>
         </div>
 
@@ -146,15 +148,19 @@ function ProjectDetail() {
               />
             </div>
           ) : (
-            <div className={styles.gallery}>
+            <div className={`${styles.gallery} ${project.galleryFramed ? styles.galleryFramed : ''}`}>
               {project.gallery && project.gallery.length > 0 ? (
                 project.gallery.map((src, i) => (
                   <div
                     key={src}
-                    className={`${styles.galleryItem} ${i === 0 && !project.compareEmbed ? styles.galleryBig : ''}`}
+                    className={`${styles.galleryItem} ${i === 0 && !project.compareEmbed && !project.galleryEven ? styles.galleryBig : ''}`}
                     onClick={() => setLightboxSrc(src)}
                   >
-                    <img src={src} alt="" className={styles.galleryImg} />
+                    <img
+                      src={src}
+                      alt=""
+                      className={`${styles.galleryImg} ${project.galleryFramed ? styles.galleryImgFramed : ''}`}
+                    />
                   </div>
                 ))
               ) : (
@@ -181,15 +187,57 @@ function ProjectDetail() {
               )}
             </div>
           )}
+
+          {project.videos && project.videos.length > 0 && (
+            <div className={styles.videosGrid}>
+              {project.videos.map((video) =>
+                video.title || video.description ? (
+                  <div key={video.src} className={styles.videoFeatureRow}>
+                    <div className={styles.videoWrapper}>
+                      <video
+                        src={video.src}
+                        controls
+                        preload="metadata"
+                        className={styles.videoFrame}
+                      />
+                    </div>
+                    <div className={styles.videoFeatureText}>
+                      {video.title && <h3 className={styles.videoFeatureTitle}>{video.title}</h3>}
+                      {video.description && (
+                        <p className={styles.videoFeatureDesc}>{video.description}</p>
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    key={video.src}
+                    className={`${styles.videoItem} ${video.featured ? styles.videoItemFeatured : ''}`}
+                  >
+                    <div className={styles.videoWrapper}>
+                      <video
+                        src={video.src}
+                        controls
+                        preload="metadata"
+                        className={styles.videoFrame}
+                      />
+                    </div>
+                    {video.label && <p className={styles.videoLabel}>{video.label}</p>}
+                  </div>
+                )
+              )}
+            </div>
+          )}
         </div>
 
         {/* Closing CTA */}
         <div className={styles.closing}>
           <p className={styles.closingText}>Envie d'en voir plus&nbsp;?</p>
           <div className={styles.closingActions}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btnPrimary">
-              Voir le site en ligne <i className="fa-solid fa-arrow-up-right" />
-            </a>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="btnPrimary">
+                Voir le site en ligne <i className="fa-solid fa-arrow-up-right" />
+              </a>
+            )}
             <Link to="/#portfolio" className="btnGhost">
               <i className="fa-solid fa-arrow-left" /> Tous les projets
             </Link>

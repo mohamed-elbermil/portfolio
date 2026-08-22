@@ -40,6 +40,7 @@
   object-fit: cover;
   display: block;
   filter: saturate(0.3);
+  object-position: 50% 4%;
 }
 
 /* ── Header row ──────────────────────────────────────────────── */
@@ -197,6 +198,13 @@
   gap: 1.25rem;
 }
 
+.galleryFramed {
+  background: #7d41d9;
+  padding: 2em;
+  border-radius: 22px;
+  border: #502b88 6px solid;
+}
+
 .galleryItem {
   border-radius: var(--b-border-basic);
   overflow: hidden;
@@ -221,6 +229,21 @@
   object-position: center;
   display: block;
 }
+
+.galleryBig .galleryImgFramed {
+  object-position: 50% 17%;
+  animation: galleryscroll 1s ease-in-out infinite alternate;
+}
+
+.galleryFramed {
+      background: linear-gradient(45deg, #32007e, #7d41d9);
+}
+
+@keyframes galleryscroll {
+  from {object-position: 50% 17%;}
+  to   {object-position: 50% 9%;}
+ }
+
 
 .galleryPlaceholder {
   width: 100%;
@@ -282,6 +305,67 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.videosGrid {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.videoItem {
+  width: 100%;
+  max-width: 480px;
+}
+
+.videoItemFeatured {
+  width: 100%;
+  max-width: none;
+}
+
+.videosGrid .videoWrapper {
+  margin-top: 0;
+}
+
+.videoLabel {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.videoFeatureRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 6em 0;
+}
+
+.videoFeatureRow .videoWrapper {
+  margin-top: 0;
+}
+
+.videoFeatureText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.videoFeatureTitle {
+  font-family: var(--font-heading);
+  font-size: 3.3rem;
+  font-weight: 600;
+  color: #673AB7;
+  letter-spacing: -0.01em;
+}
+
+.videoFeatureDesc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 /* ── Lightbox ────────────────────────────────────────────────── */
@@ -383,6 +467,10 @@
   .blocks {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .videoFeatureRow {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }
 

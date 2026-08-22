@@ -29,16 +29,12 @@ function Card({ project, index, view }) {
     return () => observer.disconnect();
   }, []);
 
-  const isPlaceholder = !project.link;
-  const Tag = isPlaceholder ? 'div' : Link;
-  const linkProps = isPlaceholder ? {} : { to: `/portfolio/${project.slug}` };
-
   return (
-    <Tag
+    <Link
       ref={cardRef}
+      to={`/portfolio/${project.slug}`}
       className={`${styles.card} ${view === 'list' ? styles.cardList : styles.cardGrid} reveal`}
       style={{ transitionDelay: `${Math.min(index, 8) * 60}ms` }}
-      {...linkProps}
     >
       <div className={styles.thumb}>
         {project.image ? (
@@ -56,11 +52,9 @@ function Card({ project, index, view }) {
               <span key={tag} className={styles.tag}>{tag}</span>
             ))}
           </div>
-          {!isPlaceholder && (
-            <span className={styles.viewCta}>
-              Voir le projet <i className="fa-solid fa-arrow-up-right" />
-            </span>
-          )}
+          <span className={styles.viewCta}>
+            Voir le projet <i className="fa-solid fa-arrow-up-right" />
+          </span>
         </div>
       </div>
 
@@ -71,7 +65,7 @@ function Card({ project, index, view }) {
         </div>
         <p className={styles.cardDesc}>{project.description}</p>
       </div>
-    </Tag>
+    </Link>
   );
 }
 

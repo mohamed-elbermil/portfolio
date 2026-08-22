@@ -133,6 +133,18 @@
   }
 }
 
+/* ── Subtitle ────────────────────────────────────────────────── */
+.subtitle {
+  padding-top: 1.1rem;
+  max-width: 480px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+  animation: fadeDown 0.8s ease 0.15s both;
+}
+
 /* ── Title block ─────────────────────────────────────────────── */
 .titleBlock {
   flex: 1;

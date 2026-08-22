@@ -24,13 +24,13 @@ import poolRoom2 from "../assets/images/projects/pool2.png";
 import poolRoom3 from "../assets/images/projects/pool3.png";
 import poolRoom4 from "../assets/images/projects/pool4.png";
 
-export const CATEGORIES = ["Tous", "Graphisme", "Web", "Vidéo"];
+export const CATEGORIES = ["Tous", "Web & Apps", "3D & Motion", "Branding & Graphisme"];
 
 export const projects = [
     {
     slug: "formasecret",
     title: "FormaSecret",
-    category: "Web",
+    category: "Web & Apps",
     tags: ["React", "CSS3", "JavaScript"],
     image: formasecretThumb,
     description:
@@ -44,8 +44,7 @@ export const projects = [
   {
     slug: "fitness-area",
     title: "Fitness-Area",
-    category: "Web",
-    categories: ["Graphisme", "Web", "Vidéo"],
+    category: "Web & Apps",
     tags: ["React", "CSS3", "JavaScript", "Motion Design"],
     image:
       "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/39a8ec147774929.Y3JvcCwxMDgwLDg0NCwwLDg1.png",
@@ -75,7 +74,7 @@ export const projects = [
   {
     slug: "netflix-interface",
     title: "Netflix Interface",
-    category: "Web",
+    category: "Web & Apps",
     tags: ["React", "Bootstrap", "JavaScript"],
     image:
       "https://www.journaldugeek.com/app/uploads/2025/01/netflix-jeux-mobiles.jpg",
@@ -90,9 +89,30 @@ export const projects = [
     link: "https://github.com/mohamed-elbermil/netflix-interface",
   },
   {
+    slug: "pool-room",
+    title: "Pool Room",
+    category: "3D & Motion",
+    tags: ["3D", "Blender", "Architecture d'intérieur"],
+    image: poolRoom2,
+    description:
+      "Rendu 3D d'une salle de piscine intérieure - exploration de volumes organiques, carrelage et lumière naturelle.",
+    problem:
+      "L'objectif de ce projet était de modéliser et d'éclairer une salle de piscine intérieure entièrement en 3D, en misant sur des volumes organiques (murs arrondis, escalier en colimaçon) plutôt que sur une architecture classique à angles droits. Le principal défi technique résidait dans le rendu réaliste de l'eau et du carrelage sous une lumière naturelle changeante, pour obtenir une ambiance à la fois épurée et apaisante, proche d'un rendu architectural professionnel.",
+    year: "2026",
+    galleryEven: true,
+    gallery: [poolRoom3, poolRoom1, poolRoom4, poolRoom2],
+    sketchfab: {
+      embed: "https://sketchfab.com/models/ce51d806d78b4074bc4caffb6663d76e/embed?autostart=1",
+      title: "poolroom",
+      modelUrl: "https://sketchfab.com/3d-models/poolroom-ce51d806d78b4074bc4caffb6663d76e",
+      author: "mohamed.elbermil69780",
+      authorUrl: "https://sketchfab.com/mohamed.elbermil69780",
+    },
+  },
+  {
     slug: "miniatures-youtube",
     title: "Miniatures YouTube",
-    category: "Graphisme",
+    category: "Branding & Graphisme",
     tags: ["Figma", "Illustrator", "Design"],
     image:
       "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9024c0228643009.Y3JvcCw2NTUsNTEyLDcwMiwyNzQ.png",
@@ -108,7 +128,7 @@ export const projects = [
   {
     slug: "the-boss-nft",
     title: "The Boss — Collection NFT",
-    category: "Graphisme",
+    category: "Branding & Graphisme",
     tags: ["Illustration", "NFT", "Motion Design"],
     image: theBossPost,
     description:
@@ -127,26 +147,5 @@ export const projects = [
           "Capture de ma session de travail en direct, du premier coup de crayon jusqu'aux finitions du personnage - pour montrer le processus de création, pas seulement le résultat final.",
       },
     ],
-  },
-  {
-    slug: "pool-room",
-    title: "Pool Room",
-    category: "Graphisme",
-    tags: ["3D", "Blender", "Architecture d'intérieur"],
-    image: poolRoom2,
-    description:
-      "Rendu 3D d'une salle de piscine intérieure - exploration de volumes organiques, carrelage et lumière naturelle.",
-    problem:
-      "L'objectif de ce projet était de modéliser et d'éclairer une salle de piscine intérieure entièrement en 3D, en misant sur des volumes organiques (murs arrondis, escalier en colimaçon) plutôt que sur une architecture classique à angles droits. Le principal défi technique résidait dans le rendu réaliste de l'eau et du carrelage sous une lumière naturelle changeante, pour obtenir une ambiance à la fois épurée et apaisante, proche d'un rendu architectural professionnel.",
-    year: "2026",
-    galleryEven: true,
-    gallery: [poolRoom3, poolRoom1, poolRoom4, poolRoom2],
-    sketchfab: {
-      embed: "https://sketchfab.com/models/ce51d806d78b4074bc4caffb6663d76e/embed?autostart=1",
-      title: "poolroom",
-      modelUrl: "https://sketchfab.com/3d-models/poolroom-ce51d806d78b4074bc4caffb6663d76e",
-      author: "mohamed.elbermil69780",
-      authorUrl: "https://sketchfab.com/mohamed.elbermil69780",
-    },
   },
 ];

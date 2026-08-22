@@ -42,9 +42,8 @@ const About = () => {
 
       <Reveal as="div" className={styles.right}>
         <p className={styles.lead}>
-          Passionné par le développement web et le design depuis plusieurs années,
-          je combine créativité et expertise technique pour créer des expériences
-          numériques exceptionnelles.
+          J'associe rigueur technique et création visuelle pour concevoir des
+          expériences digitales complètes, du prototype 3D au site web sur-mesure.
         </p>
         <p className={styles.text}>
           Fondateur de <a href="https://soblim.com/" target="_blank" rel="noopener noreferrer" className={styles.soblim}>l'agence SOBLIM</a>, je m'efforce d'aider les entreprises

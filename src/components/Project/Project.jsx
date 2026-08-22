@@ -4,9 +4,9 @@ import styles from './Project.module.css';
 import { CATEGORIES, projects } from '../../data/projects';
 
 const catClass = (category) => ({
-  Graphisme: styles.catGraphisme,
-  Web: styles.catWeb,
-  Vidéo: styles.catVideo,
+  'Branding & Graphisme': styles.catGraphisme,
+  'Web & Apps': styles.catWeb,
+  '3D & Motion': styles.catVideo,
 }[category] || '');
 
 /* ── Single card (grid or list variant) ───────────────────────── */
@@ -76,7 +76,7 @@ const Project = () => {
 
   const filtered = category === 'Tous'
     ? projects
-    : projects.filter(p => (p.categories || [p.category]).includes(category));
+    : projects.filter(p => p.category === category);
 
   return (
     <section className={styles.section} id="portfolio">

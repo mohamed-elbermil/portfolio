@@ -5,9 +5,9 @@ import { projects } from '../../data/projects';
 import styles from './ProjectDetail.module.css';
 
 const catClass = (category) => ({
-  Graphisme: styles.catGraphisme,
-  Web: styles.catWeb,
-  Vidéo: styles.catVideo,
+  'Branding & Graphisme': styles.catGraphisme,
+  'Web & Apps': styles.catWeb,
+  '3D & Motion': styles.catVideo,
 }[category] || '');
 
 const isPlaceholder = (text) => typeof text === 'string' && text.startsWith('[');

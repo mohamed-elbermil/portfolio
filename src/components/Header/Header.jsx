@@ -58,12 +58,16 @@ function Header() {
           </div>
         </div>
 
+        <p className={styles.subtitle}>
+          Conception Web, Visualisation 3D &amp; Direction Artistique pour marques et startups.
+        </p>
+
         {/* Title block */}
         <div className={styles.titleBlock}>
           <h1 className={styles.mainTitle}>
-            <span className={styles.line1}>Développeur</span>
+            <span className={styles.line1}>Digital</span>
             <span className={styles.line2}>
-              Web <span className={styles.accentChar}>&</span>
+              <span className={styles.accentChar}>&</span> Product
             </span>
             <span className={styles.line3}>Designer</span>
           </h1>

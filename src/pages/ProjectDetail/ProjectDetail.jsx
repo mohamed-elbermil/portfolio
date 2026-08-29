@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import { projects } from '../../data/projects';
@@ -30,10 +30,26 @@ function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const [lightboxSrc, setLightboxSrc] = useState(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setCarouselIndex(0);
   }, [slug]);
+
+  const scrollCarouselTo = (i) => {
+    const track = carouselRef.current;
+    if (!track || !project) return;
+    const clamped = Math.max(0, Math.min(i, project.gallery.length - 1));
+    track.scrollTo({ left: clamped * track.clientWidth, behavior: 'smooth' });
+  };
+
+  const handleCarouselScroll = () => {
+    const track = carouselRef.current;
+    if (!track) return;
+    setCarouselIndex(Math.round(track.scrollLeft / track.clientWidth));
+  };
 
   useEffect(() => {
     if (!lightboxSrc) return;
@@ -151,6 +167,59 @@ function ProjectDetail() {
                 allowFullScreen
               />
             </div>
+          ) : project.galleryCarousel && project.gallery && project.gallery.length > 0 ? (
+            <div className={styles.galleryCarousel}>
+              <div
+                className={styles.galleryCarouselTrack}
+                ref={carouselRef}
+                onScroll={handleCarouselScroll}
+              >
+                {project.gallery.map((src) => (
+                  <div
+                    key={src}
+                    className={styles.galleryCarouselItem}
+                    onClick={() => setLightboxSrc(src)}
+                  >
+                    <img src={src} alt="" className={styles.galleryCarouselImg} />
+                  </div>
+                ))}
+              </div>
+
+              {project.gallery.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className={`${styles.galleryCarouselArrow} ${styles.galleryCarouselPrev}`}
+                    onClick={() => scrollCarouselTo(carouselIndex - 1)}
+                    disabled={carouselIndex === 0}
+                    aria-label="Image précédente"
+                  >
+                    <i className="fa-solid fa-chevron-left" />
+                  </button>
+                  <button
+                    type="button"
+                    className={`${styles.galleryCarouselArrow} ${styles.galleryCarouselNext}`}
+                    onClick={() => scrollCarouselTo(carouselIndex + 1)}
+                    disabled={carouselIndex === project.gallery.length - 1}
+                    aria-label="Image suivante"
+                  >
+                    <i className="fa-solid fa-chevron-right" />
+                  </button>
+
+                  <div className={styles.galleryCarouselDots}>
+                    {project.gallery.map((src, i) => (
+                      <button
+                        key={src}
+                        type="button"
+                        className={`${styles.galleryCarouselDot} ${i === carouselIndex ? styles.galleryCarouselDotActive : ''}`}
+                        onClick={() => scrollCarouselTo(i)}
+                        aria-label={`Aller à l'image ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           ) : (
             <div className={`${styles.gallery} ${project.galleryFramed ? styles.galleryFramed : ''}`}>
               {project.gallery && project.gallery.length > 0 ? (
@@ -189,6 +258,27 @@ function ProjectDetail() {
                   </div>
                 </>
               )}
+            </div>
+          )}
+
+          {project.mockups && project.mockups.length > 0 && (
+            <div className={styles.mockupsGrid}>
+              {project.mockups.map((item) => (
+                <div key={item.image} className={styles.mockupRow}>
+                  <div
+                    className={styles.mockupImageWrapper}
+                    onClick={() => setLightboxSrc(item.image)}
+                  >
+                    <img src={item.image} alt="" className={styles.mockupImg} />
+                  </div>
+                  <div className={styles.mockupText}>
+                    {item.title && <h3 className={styles.mockupTitle}>{item.title}</h3>}
+                    {item.description && (
+                      <p className={styles.mockupDesc}>{item.description}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 

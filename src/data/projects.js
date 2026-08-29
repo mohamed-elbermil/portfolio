@@ -2,6 +2,8 @@ import fitnessAreaBanner from "../assets/images/projects/fitness-area-banner.png
 import fitnessAreaHero from "../assets/images/projects/fitness-area-hero.png";
 import fitnessAreaCta from "../assets/images/projects/fitness-area-cta.png";
 import fitnessAreaPricing from "../assets/images/projects/fitness-area-pricing.png";
+import fitnessAreaCarte from "../assets/images/projects/carte-fitness-area.jpg";
+import fitnessAreaGourde from "../assets/images/projects/gourde-fitness-area.jpg";
 import miniatureYoutube1 from "../assets/images/projects/miniature-1.png";
 import miniatureYoutube2 from "../assets/images/projects/miniature-2.png";
 import miniatureYoutube3 from "../assets/images/projects/miniature-4.png";
@@ -55,6 +57,21 @@ export const projects = [
       "Le site d'origine, conçu en HTML/CSS, manquait d'impact et d'ergonomie. La présentation des formules manquait de clarté, la hiérarchie visuelle était floue et l'accès à la séance découverte n'était pas assez mis en valeur. L'enjeu était de restructurer l'interface pour rendre la lecture plus fluide (clarification des tarifs, mise en avant des avantages et retravail des appels à l'action) tout en migrant le projet sous React pour le rendre plus performant et plus simple à maintenir.",
     year: "2021 - 2022",
     gallery: [fitnessAreaHero, fitnessAreaCta, fitnessAreaPricing],
+    galleryCarousel: true,
+    mockups: [
+      {
+        image: fitnessAreaCarte,
+        title: "Carte adhérent",
+        description:
+          "La carte adhérent Fitness-Area sert de badge d'accès : elle permet aux membres d'entrer et de sortir librement du club à toute heure d'ouverture, sans passer par l'accueil.",
+      },
+      {
+        image: fitnessAreaGourde,
+        title: "Gourde du club",
+        description:
+          "Distribuée aux nouveaux adhérents et disponible à l'accueil, la gourde Fitness-Area accompagne les séances d'entraînement et prolonge l'identité de marque en dehors des murs de la salle.",
+      },
+    ],
     videos: [
       {
         embed: "https://www.youtube.com/embed/pzeNhG7iZhg",
